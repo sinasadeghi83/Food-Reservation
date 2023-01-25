@@ -1,0 +1,27 @@
+[
+{
+  "directory": "/home/sinasadeghi/Programming/Clang/Project/build",
+  "command": "/usr/bin/gcc    -lsqlite3 -g -o CMakeFiles/FoodReservation.dir/main.c.o -c /home/sinasadeghi/Programming/Clang/Project/main.c",
+  "file": "/home/sinasadeghi/Programming/Clang/Project/main.c"
+},
+{
+  "directory": "/home/sinasadeghi/Programming/Clang/Project/build",
+  "command": "/usr/bin/gcc    -lsqlite3 -g -o CMakeFiles/FoodReservation.dir/database/DbManager.c.o -c /home/sinasadeghi/Programming/Clang/Project/database/DbManager.c",
+  "file": "/home/sinasadeghi/Programming/Clang/Project/database/DbManager.c"
+},
+{
+  "directory": "/home/sinasadeghi/Programming/Clang/Project/build",
+  "command": "/usr/bin/gcc    -lsqlite3 -g -o CMakeFiles/FoodReservation.dir/database/Migration.c.o -c /home/sinasadeghi/Programming/Clang/Project/database/Migration.c",
+  "file": "/home/sinasadeghi/Programming/Clang/Project/database/Migration.c"
+},
+{
+  "directory": "/home/sinasadeghi/Programming/Clang/Project/build",
+  "command": "/usr/bin/gcc    -lsqlite3 -g -o CMakeFiles/FoodReservation.dir/sinastd/Date.c.o -c /home/sinasadeghi/Programming/Clang/Project/sinastd/Date.c",
+  "file": "/home/sinasadeghi/Programming/Clang/Project/sinastd/Date.c"
+},
+{
+  "directory": "/home/sinasadeghi/Programming/Clang/Project/build",
+  "command": "/usr/bin/gcc    -lsqlite3 -g -o CMakeFiles/FoodReservation.dir/sinastd/Parser.c.o -c /home/sinasadeghi/Programming/Clang/Project/sinastd/Parser.c",
+  "file": "/home/sinasadeghi/Programming/Clang/Project/sinastd/Parser.c"
+}
+]

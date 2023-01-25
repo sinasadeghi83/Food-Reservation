@@ -1,0 +1,1 @@
+/usr/bin/gcc  -lsqlite3 -g -rdynamic CMakeFiles/FoodReservation.dir/main.c.o CMakeFiles/FoodReservation.dir/database/DbManager.c.o CMakeFiles/FoodReservation.dir/database/Migration.c.o CMakeFiles/FoodReservation.dir/sinastd/Date.c.o CMakeFiles/FoodReservation.dir/sinastd/Parser.c.o -o FoodReservation 

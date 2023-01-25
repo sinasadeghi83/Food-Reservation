@@ -84,7 +84,10 @@ static void fetchFileNames(char *migNames[MAX_N])
             if (i < 2)
                 i++;
             else
-                migNames[nameMigCount++] = dir->d_name;
+            {
+                migNames[nameMigCount] = malloc(strlen(dir->d_name) + 1);
+                strcpy(migNames[nameMigCount++], dir->d_name);
+            }
         }
         closedir(d);
     }
@@ -106,6 +109,7 @@ bool runMigrations()
     }
     // Get the list of migrations from migrations folder
     char *migNames[MAX_N];
+    memset(migNames, '\0', MAX_N);
     fetchFileNames(migNames);
     // Run the migrations
     for (int i = 0; i < nameMigCount; i++)
@@ -124,15 +128,13 @@ bool runMigrations()
             // Run the migration
             char *migPath = strappend("./migrations/ups/", migNames[i]);
             int year, day, month;
-            char *migName = malloc(strlen(migNames[i]));
-            strcpy(migName, migNames[i]);
-            sscanf(migName, "u%d_%d_%d", &year, &month, &day);
+            sscanf(migNames[i], "u%d_%d_%d", &year, &month, &day);
             Date *date = CreateDate(year, month, day);
             char *strDate = DateToString(date);
             FILE *fp = fopen(migPath, "r");
             if (fp == NULL)
             {
-                fprintf(stderr, "Error opening migration file[%s]: %s", migName, migPath);
+                fprintf(stderr, "Error opening migration file[%s]: %s", migNames[i], migPath);
                 return false;
             }
             char *sql = malloc(1000);
@@ -143,12 +145,12 @@ bool runMigrations()
             free(sql);
             if (res != SQLITE_OK)
             {
-                fprintf(stderr, "Error running migration[%s]: %s", migName, errorMsg);
+                fprintf(stderr, "Error running migration[%s]: %s", migNames[i], errorMsg);
                 sqlite3_free(errorMsg);
                 return false;
             }
             // Insert the migration into the database
-            char *insertSql = strappend("INSERT INTO migration (name, created_at) VALUES ('", migName);
+            char *insertSql = strappend("INSERT INTO migration (name, created_at) VALUES ('", migNames[i]);
             strcat(insertSql, "', '");
             strcat(insertSql, strDate);
             strcat(insertSql, "');");
@@ -156,16 +158,18 @@ bool runMigrations()
             DateFree(date);
             char *errorMsg2 = 0;
             res = sqlite3_exec(getMigrationDb(), insertSql, NULL, NULL, &errorMsg2);
+            free(insertSql);
             if (res != SQLITE_OK)
             {
-                fprintf(stderr, "Error inserting migration[%s]: %s", migName, errorMsg2);
+                fprintf(stderr, "Error inserting migration[%s]: %s", migNames[i], errorMsg2);
                 sqlite3_free(errorMsg2);
                 return false;
             }
             else
             {
-                printf("Migration %s ran successfully\n", migName);
+                printf("Migration %s ran successfully\n", migNames[i]);
             }
+            free(migNames[i]);
         }
     }
     return true;

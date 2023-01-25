@@ -124,13 +124,15 @@ bool runMigrations()
             // Run the migration
             char *migPath = strappend("./migrations/ups/", migNames[i]);
             int year, day, month;
-            sscanf(migPath, "u%d_%d_%d", &year, &month, &day);
-            Date *date = CreateDate(year, day, month);
+            char *migName = malloc(strlen(migNames[i]));
+            strcpy(migName, migNames[i]);
+            sscanf(migName, "u%d_%d_%d", &year, &month, &day);
+            Date *date = CreateDate(year, month, day);
             char *strDate = DateToString(date);
             FILE *fp = fopen(migPath, "r");
             if (fp == NULL)
             {
-                fprintf(stderr, "Error opening migration file: %s", migPath);
+                fprintf(stderr, "Error opening migration file[%s]: %s", migName, migPath);
                 return false;
             }
             char *sql = malloc(1000);
@@ -141,12 +143,12 @@ bool runMigrations()
             free(sql);
             if (res != SQLITE_OK)
             {
-                fprintf(stderr, "Error running migration: %s", errorMsg);
+                fprintf(stderr, "Error running migration[%s]: %s", migName, errorMsg);
                 sqlite3_free(errorMsg);
                 return false;
             }
             // Insert the migration into the database
-            char *insertSql = strappend("INSERT INTO migration (name, created_at) VALUES ('", migNames[i]);
+            char *insertSql = strappend("INSERT INTO migration (name, created_at) VALUES ('", migName);
             strcat(insertSql, "', '");
             strcat(insertSql, strDate);
             strcat(insertSql, "');");
@@ -156,13 +158,13 @@ bool runMigrations()
             res = sqlite3_exec(getMigrationDb(), insertSql, NULL, NULL, &errorMsg2);
             if (res != SQLITE_OK)
             {
-                fprintf(stderr, "Error inserting migration: %s", errorMsg2);
+                fprintf(stderr, "Error inserting migration[%s]: %s", migName, errorMsg2);
                 sqlite3_free(errorMsg2);
                 return false;
             }
             else
             {
-                printf("Migration %s ran successfully\n", migNames[i]);
+                printf("Migration %s ran successfully\n", migName);
             }
         }
     }

@@ -39,22 +39,24 @@ void initialiseDate(Date *this, int year, int month, int day)
 // Returns Date *this as a string
 char *DateToString(Date *this)
 {
-    char *year = parseInt(this->year), *month = parseInt(this->month), *day = parseInt(this->day);
-    char *result = year;
-    strcat(result, "-");
+    char *result = malloc(11);
+    sprintf(result, "%d-", this->year);
     if (this->month < 10)
     {
-        strcat(result, "0");
+        sprintf(result, "%s0%d-", result, this->month);
     }
-    strcat(result, month);
-    strcat(result, "-");
+    else
+    {
+        sprintf(result, "%s%d-", result, this->month);
+    }
+
     if (this->day < 10)
     {
-        strcat(result, "0");
+        sprintf(result, "%s0%d", result, this->day);
     }
-    strcat(result, day);
-    free(year);
-    free(month);
-    free(day);
+    else
+    {
+        sprintf(result, "%s%d", result, this->day);
+    }
     return result;
 }

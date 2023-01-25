@@ -15,8 +15,13 @@ int openDb()
         // Prints error message if db is not opened
         if (isopen != SQLITE_OK)
         {
+            isopen = 0;
             const char *error = sqlite3_errmsg(db);
             printf("Error opening database: %s", error);
+        }
+        else
+        {
+            isopen = 1;
         }
         return isopen;
     }
@@ -49,7 +54,7 @@ sqlite3 *getDb()
         openDb();
     }
     // If database is not opened retuens NULL
-    if (isopen != SQLITE_OK)
+    if (isopen != 1)
     {
         return NULL;
     }
@@ -64,8 +69,13 @@ int openMigrationDb()
         // Prints the error message if the database is not opened
         if (migrationIsOpen != SQLITE_OK)
         {
+            migrationIsOpen = 0;
             const char *error = sqlite3_errmsg(migrationDb);
             printf("Error opening database: %s", error);
+        }
+        else
+        {
+            migrationIsOpen = 1;
         }
         return migrationIsOpen;
     }
@@ -95,7 +105,7 @@ sqlite3 *getMigrationDb()
     {
         openMigrationDb();
     }
-    if (migrationIsOpen != SQLITE_OK)
+    if (migrationIsOpen != 1)
     {
         return NULL;
     }

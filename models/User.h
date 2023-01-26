@@ -41,4 +41,5 @@ bool UserVerifyPassword(User *this, char *password);
 char *UserTypeString(User *this);
 char *UserGenderString(User *this);
 bool UserSave(User *this);
+User **UserFind(const char *whereCols[], const char *whereValues[]);
 #endif

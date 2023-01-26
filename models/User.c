@@ -10,6 +10,7 @@
 #include <string.h>
 
 #define USER_TABLE "user"
+#define MAX_USER_FETCH 100
 
 const char *USER_COLS[9] = {
     "username",
@@ -60,57 +61,6 @@ void freeUser(User *this)
     // Free the user
     free(this);
 }
-
-// // Set the password without encyrption
-// void UserSetPassword(User *this, char *password)
-// {
-//     this->password = malloc(strlen(password) + 1);
-//     strcpy(this->password, password);
-// }
-
-// // Verify password without encyrption
-// bool UserVerifyPassword(User *this, char *password)
-// {
-//     return strcmp(this->password, password) == 0;
-// }
-
-// bool saveUser(User *this)
-// {
-// }
-
-// // Set the password using gcrypt
-// void UserSetPassword(User *this, char *password)
-// {
-//     // Hash the password using SHA512
-//     gcry_md_hd_t hd;
-//     gcry_error_t err;
-//     err = gcry_md_open(&hd, GCRY_MD_SHA512, 0);
-//     assert(!err);
-//     gcry_md_write(hd, password, strlen(password));
-//     char *hash = gcry_md_read(hd, GCRY_MD_SHA512);
-//     assert(hash);
-//     // Set the password
-//     this->password = malloc(gcry_md_get_algo_dlen(GCRY_MD_SHA512));
-//     memcpy(this->password, hash, gcry_md_get_algo_dlen(GCRY_MD_SHA512));
-//     gcry_md_close(hd);
-// }
-
-// // Verify hashed password using gcrypt
-// bool UserVerifyPassword(User *this, char *password)
-// {
-//     // Hash the password using SHA512
-//     gcry_md_hd_t hd;
-//     gcry_error_t err;
-//     err = gcry_md_open(&hd, GCRY_MD_SHA512, 0);
-//     assert(!err);
-//     gcry_md_write(hd, password, strlen(password));
-//     char *hash = gcry_md_read(hd, GCRY_MD_SHA512);
-//     assert(hash);
-//     // Verify the password
-//     bool ret = memcmp(hash, this->password, gcry_md_get_algo_dlen(GCRY_MD_SHA512)) == 0;
-//     gcry_md_close(hd);
-//     return ret;
-// }
 
 // Set the password (hashed with bcrypt)
 void UserSetPassword(User *this, char *password)
@@ -176,3 +126,91 @@ bool UserSave(User *this)
         NULL};
     return DbInsert(USER_TABLE, USER_COLS, values);
 }
+
+// Callback function for DbSelect
+// This function will fill in users array with the result of the query
+int UserSelectCallback(void *data, int argc, char **argv, char **azColName)
+{
+    static int index = 0;
+    User **users = (User **)(data);
+    UserGender gender;
+    if (argv[6] == "female")
+    {
+        gender = USER_FEMALE;
+    }
+    else
+    {
+        gender = USER_MALE;
+    }
+
+    UserType type;
+    if (argv[2] == "admin")
+    {
+        type = USER_ADMIN;
+    }
+    else
+    {
+        type = USER_STUDENT;
+    }
+    users[index++] = UserCreate(argv[0], argv[1], argv[3], argv[4], argv[5], CreateDateFromString(argv[7]), gender, type);
+    return 0;
+}
+
+User **UserFind(const char *whereCols[], const char *whereValues[])
+{
+    User **users = calloc(MAX_USER_FETCH, sizeof(User *)); // database result
+    int i = 0;
+    bool status = DbSelect(USER_TABLE, whereCols, whereValues, UserSelectCallback, (void *)users);
+    return status ? users : NULL;
+}
+
+// // Set the password without encyrption
+// void UserSetPassword(User *this, char *password)
+// {
+//     this->password = malloc(strlen(password) + 1);
+//     strcpy(this->password, password);
+// }
+
+// // Verify password without encyrption
+// bool UserVerifyPassword(User *this, char *password)
+// {
+//     return strcmp(this->password, password) == 0;
+// }
+
+// bool saveUser(User *this)
+// {
+// }
+
+// // Set the password using gcrypt
+// void UserSetPassword(User *this, char *password)
+// {
+//     // Hash the password using SHA512
+//     gcry_md_hd_t hd;
+//     gcry_error_t err;
+//     err = gcry_md_open(&hd, GCRY_MD_SHA512, 0);
+//     assert(!err);
+//     gcry_md_write(hd, password, strlen(password));
+//     char *hash = gcry_md_read(hd, GCRY_MD_SHA512);
+//     assert(hash);
+//     // Set the password
+//     this->password = malloc(gcry_md_get_algo_dlen(GCRY_MD_SHA512));
+//     memcpy(this->password, hash, gcry_md_get_algo_dlen(GCRY_MD_SHA512));
+//     gcry_md_close(hd);
+// }
+
+// // Verify hashed password using gcrypt
+// bool UserVerifyPassword(User *this, char *password)
+// {
+//     // Hash the password using SHA512
+//     gcry_md_hd_t hd;
+//     gcry_error_t err;
+//     err = gcry_md_open(&hd, GCRY_MD_SHA512, 0);
+//     assert(!err);
+//     gcry_md_write(hd, password, strlen(password));
+//     char *hash = gcry_md_read(hd, GCRY_MD_SHA512);
+//     assert(hash);
+//     // Verify the password
+//     bool ret = memcmp(hash, this->password, gcry_md_get_algo_dlen(GCRY_MD_SHA512)) == 0;
+//     gcry_md_close(hd);
+//     return ret;
+// }

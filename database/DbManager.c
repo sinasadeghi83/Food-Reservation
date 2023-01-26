@@ -144,9 +144,11 @@ bool DbInsert(const char *table, const char *cols[], const char *values[])
     i = 0;
     while (values[i] != NULL)
     {
-        strcat(sql, "'");
-        strcat(sql, values[i]);
-        strcat(sql, "'");
+        char *escapedValue = sqlite3_mprintf("%Q", values[i]);
+        // strcat(sql, "'");
+        strcat(sql, escapedValue);
+        // strcat(sql, "'");
+        sqlite3_free(escapedValue);
         if (values[i + 1] != NULL)
         {
             strcat(sql, ", ");
@@ -166,3 +168,73 @@ bool DbInsert(const char *table, const char *cols[], const char *values[])
     }
     return true;
 }
+
+// Fetching rows from database according to the table name and where cols and values statements
+// Using IN statement would look like : DbSelect("table", {"col1", "col2"}, {"IN (1,2,3)", "IN (4,5,6)"}, callback, NULL);
+// Todo: Add support for prevention of SQL injection
+bool DbSelect(const char *table, const char *whereCols[], const char *whereValues[], int (*callback)(void *, int, char **, char **), void *data)
+{
+    openDb();
+    if (isopen != 1)
+    {
+        return false;
+    }
+
+    // Creating sql statement
+    char sql[MAX_SQL];
+    memset(sql, '\0', MAX_SQL);
+    sprintf(sql, "SELECT * FROM ");
+    strcat(sql, table);
+    if (whereCols != NULL && whereValues != NULL)
+    {
+        strcat(sql, " WHERE ");
+        int i = 0;
+        while (whereCols[i] != NULL)
+        {
+            // strcat(sql, "'");
+            strcat(sql, whereCols[i]);
+            // strcat(sql, "'");
+            bool isIN = false;
+            char *whereValue = (char *)malloc(strlen(whereValues[i]) + 1);
+            strcpy(whereValue, whereValues[i]);
+            if (strncmp(whereValue, "IN", 2) != 0)
+            {
+                strcat(sql, " = '");
+            }
+            else
+            {
+                isIN = true;
+                strcat(sql, " ");
+                strncpy(whereValue, whereValues[i] + 2, strlen(whereValues[i]) - 3);
+            }
+            // concatenating whereValues[i] by considering probable sql injection
+            char *escapedValue = sqlite3_mprintf("%q", whereValue);
+            strcat(sql, escapedValue);
+            sqlite3_free(escapedValue);
+            if (!isIN)
+            {
+                strcat(sql, "'");
+            }
+
+            if (whereCols[i + 1] != NULL)
+            {
+                strcat(sql, " AND ");
+            }
+            i++;
+        }
+    }
+    strcat(sql, ";");
+
+    // Executing sql statement
+    char *err;
+    int res = sqlite3_exec(db, sql, callback, data, &err);
+    closeDb();
+    if (res != SQLITE_OK)
+    {
+        fprintf(stderr, "Error selecting from database: %s\nCommand:%s\n", err, sql);
+    }
+    return res == SQLITE_OK;
+}
+
+// Update a row in the database according to the table name, where cols and values statements, and set cols and values statements
+// TODO

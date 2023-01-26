@@ -9,6 +9,8 @@ int openDb();
 int closeDb();
 sqlite3 *getDb();
 bool DbInsert(const char *table, const char *cols[], const char *values[]);
+bool DbSelect(const char *table, const char *whereCols[], const char *whereValues[], int (*callback)(void *, int, char **, char **), void *data);
+bool DbRawSelect(const char *table, const char *where, int (*callback)(void *, int, char **, char **), void *data);
 
 int openMigrationDb();
 int closeMigrationDb();

@@ -6,5 +6,5 @@ C_DEFINES =
 
 C_INCLUDES = 
 
-C_FLAGS =  -lsqlite3 -g
+C_FLAGS =  -lsqlite3 -lm -g
 

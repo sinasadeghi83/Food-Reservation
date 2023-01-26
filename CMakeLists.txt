@@ -10,11 +10,20 @@ set(SOURCES main.c
             database/DbManager.c
             database/Migration.c
             sinastd/Date.c
-            sinastd/Parser.c)
+            sinastd/Parser.c
+            models/User.c
+            libbcrypt/bcrypt.c
+            libbcrypt/crypt_blowfish/crypt_blowfish.c
+            libbcrypt/crypt_blowfish/crypt_gensalt.c
+            libbcrypt/crypt_blowfish/wrapper.c
+            )
 
 add_executable(FoodReservation ${SOURCES})
+#add gcrypt library
+# target_link_libraries(FoodReservation gcrypt)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -lsqlite3")
+# set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -lsqlite3 -lgcrypt -lm")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -lsqlite3 -lm")
 include(CPack)

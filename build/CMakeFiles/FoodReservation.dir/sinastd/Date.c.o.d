@@ -1,7 +1,6 @@
 CMakeFiles/FoodReservation.dir/sinastd/Date.c.o: \
  /home/sinasadeghi/Programming/Clang/Project/sinastd/Date.c \
  /usr/include/stdc-predef.h \
- /home/sinasadeghi/Programming/Clang/Project/sinastd/Date_internal.h \
  /home/sinasadeghi/Programming/Clang/Project/sinastd/Date.h \
  /usr/include/stdlib.h /usr/include/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \

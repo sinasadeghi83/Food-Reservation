@@ -5,7 +5,7 @@ CREATE TABLE IF NOT EXISTS user (
     fname VARCHAR(255) NOT NULL,
     lname VARCHAR(255) NOT NULL,
     national_code VARCHAR(255) NOT NULL,
-    gender INT DEFAULT 0,
+    gender INTEGER DEFAULT 0,
     birth_date DATETIME NOT NULL,
     UNIQUE (username, national_code)
 );

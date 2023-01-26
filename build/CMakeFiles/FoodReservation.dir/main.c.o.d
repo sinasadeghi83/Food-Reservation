@@ -15,4 +15,7 @@ CMakeFiles/FoodReservation.dir/main.c.o: \
  /usr/include/bits/types/FILE.h /usr/include/bits/types/struct_FILE.h \
  /usr/include/bits/stdio_lim.h /usr/include/bits/floatn.h \
  /usr/include/bits/floatn-common.h \
- /home/sinasadeghi/Programming/Clang/Project/database/Migration.h
+ /home/sinasadeghi/Programming/Clang/Project/models/User.h \
+ /usr/lib/gcc/x86_64-redhat-linux/12/include/stdbool.h \
+ /home/sinasadeghi/Programming/Clang/Project/models/../sinastd/Date.h \
+ /home/sinasadeghi/Programming/Clang/Project/sinastd/Date.h

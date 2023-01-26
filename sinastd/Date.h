@@ -4,6 +4,14 @@
 
 typedef struct Date Date;
 
+struct Date
+{
+    int year;
+    int month;
+    int day;
+};
+
+void initialiseDate(Date *this, int year, int month, int day);
 Date *CreateDate(int year, int month, int day);
 Date *CreateDateFromString(char *str);
 void DateFree(Date *this);

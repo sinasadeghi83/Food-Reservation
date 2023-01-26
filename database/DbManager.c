@@ -1,8 +1,12 @@
 #include <sqlite3.h>
 #include <stdlib.h>
+#include <stdbool.h>
 #include <stdio.h>
+#include <string.h>
 #include "DbManager.h"
 #include "DbManager.h"
+
+#define MAX_SQL 10000
 
 sqlite3 *db, *migrationDb;
 static int isopen = 0, migrationIsOpen = 0;
@@ -12,7 +16,7 @@ int openDb()
     if (isopen == 0)
     {
         isopen = sqlite3_open("database.db", &db);
-        // Prints error message if db is not opened
+        // Prints the error message if the database is not opened
         if (isopen != SQLITE_OK)
         {
             isopen = 0;
@@ -53,7 +57,6 @@ sqlite3 *getDb()
     {
         openDb();
     }
-    // If database is not opened retuens NULL
     if (isopen != 1)
     {
         return NULL;
@@ -110,4 +113,56 @@ sqlite3 *getMigrationDb()
         return NULL;
     }
     return migrationDb;
+}
+
+// Insert a row into the database according to the table name, columns and values
+bool DbInsert(const char *table, const char *cols[], const char *values[])
+{
+    openDb();
+    if (isopen != 1)
+    {
+        return false;
+    }
+
+    // Creating sql statement
+    char sql[MAX_SQL];
+    memset(sql, '\0', MAX_SQL);
+    sprintf(sql, "INSERT INTO %s (", table);
+    int i = 0;
+    while (cols[i] != NULL)
+    {
+        strcat(sql, "'");
+        strcat(sql, cols[i]);
+        strcat(sql, "'");
+        if (cols[i + 1] != NULL)
+        {
+            strcat(sql, ", ");
+        }
+        i++;
+    }
+    strcat(sql, ") VALUES (");
+    i = 0;
+    while (values[i] != NULL)
+    {
+        strcat(sql, "'");
+        strcat(sql, values[i]);
+        strcat(sql, "'");
+        if (values[i + 1] != NULL)
+        {
+            strcat(sql, ", ");
+        }
+        i++;
+    }
+    strcat(sql, ");");
+
+    // Executing sql statement
+    char *err;
+    int res = sqlite3_exec(db, sql, NULL, NULL, &err);
+    closeDb();
+    if (res != SQLITE_OK)
+    {
+        fprintf(stderr, "Error inserting into database: %s\nCommand:%s\n", err, sql);
+        return false;
+    }
+    return true;
 }

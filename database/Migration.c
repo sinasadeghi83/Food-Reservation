@@ -10,6 +10,7 @@
 #include "../sinastd/Parser.h"
 
 #define MAX_N 100
+#define MAX_SQL 10000
 
 static int isIntialised = 0;
 static int migCount = 0;
@@ -95,9 +96,11 @@ static void fetchFileNames(char *migNames[MAX_N])
 
 bool runMigrations()
 {
+    sqlite3 *db = getDb();
     // Get the list of migrations from database
-    char *sql = "SELECT * FROM migration ORDER BY created_at ASC";
+    char *sql = "SELECT * FROM migration ORDER BY created_at DESC";
     Migration *migs[MAX_N];
+    memset(migs, '\0', MAX_N * sizeof(Migration *));
     char *errorMsg = 0;
     int res = sqlite3_exec(getMigrationDb(), sql, selectCallback, (void *)migs, &errorMsg);
     // Print error message if any
@@ -109,10 +112,10 @@ bool runMigrations()
     }
     // Get the list of migrations from migrations folder
     char *migNames[MAX_N];
-    memset(migNames, '\0', MAX_N);
+    memset(migNames, '\0', MAX_N * sizeof(char *));
     fetchFileNames(migNames);
     // Run the migrations
-    for (int i = 0; i < nameMigCount; i++)
+    for (int i = nameMigCount - 1; i >= 0; i--)
     {
         bool isMigrated = false;
         for (int j = 0; j < migCount; j++)
@@ -137,11 +140,14 @@ bool runMigrations()
                 fprintf(stderr, "Error opening migration file[%s]: %s", migNames[i], migPath);
                 return false;
             }
-            char *sql = malloc(1000);
-            fread(sql, 1000, 1, fp);
+            char *sql = malloc(MAX_SQL);
+            memset(sql, '\0', MAX_SQL);
+            fread(sql, MAX_SQL, 1, fp);
             fclose(fp);
+            sql = realloc(sql, strlen(sql));
             char *errorMsg = 0;
-            res = sqlite3_exec(getDb(), sql, NULL, NULL, &errorMsg);
+            printf("This is the sql: \n%s\n\n", sql);
+            res = sqlite3_exec(db, sql, NULL, NULL, &errorMsg);
             free(sql);
             if (res != SQLITE_OK)
             {

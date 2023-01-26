@@ -571,6 +571,102 @@ database/Migration.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/database/Migration.c.s
 .PHONY : database/Migration.c.s
 
+libbcrypt/bcrypt.o: libbcrypt/bcrypt.c.o
+.PHONY : libbcrypt/bcrypt.o
+
+# target to build an object file
+libbcrypt/bcrypt.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/libbcrypt/bcrypt.c.o
+.PHONY : libbcrypt/bcrypt.c.o
+
+libbcrypt/bcrypt.i: libbcrypt/bcrypt.c.i
+.PHONY : libbcrypt/bcrypt.i
+
+# target to preprocess a source file
+libbcrypt/bcrypt.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/libbcrypt/bcrypt.c.i
+.PHONY : libbcrypt/bcrypt.c.i
+
+libbcrypt/bcrypt.s: libbcrypt/bcrypt.c.s
+.PHONY : libbcrypt/bcrypt.s
+
+# target to generate assembly for a file
+libbcrypt/bcrypt.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/libbcrypt/bcrypt.c.s
+.PHONY : libbcrypt/bcrypt.c.s
+
+libbcrypt/crypt_blowfish/crypt_blowfish.o: libbcrypt/crypt_blowfish/crypt_blowfish.c.o
+.PHONY : libbcrypt/crypt_blowfish/crypt_blowfish.o
+
+# target to build an object file
+libbcrypt/crypt_blowfish/crypt_blowfish.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/libbcrypt/crypt_blowfish/crypt_blowfish.c.o
+.PHONY : libbcrypt/crypt_blowfish/crypt_blowfish.c.o
+
+libbcrypt/crypt_blowfish/crypt_blowfish.i: libbcrypt/crypt_blowfish/crypt_blowfish.c.i
+.PHONY : libbcrypt/crypt_blowfish/crypt_blowfish.i
+
+# target to preprocess a source file
+libbcrypt/crypt_blowfish/crypt_blowfish.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/libbcrypt/crypt_blowfish/crypt_blowfish.c.i
+.PHONY : libbcrypt/crypt_blowfish/crypt_blowfish.c.i
+
+libbcrypt/crypt_blowfish/crypt_blowfish.s: libbcrypt/crypt_blowfish/crypt_blowfish.c.s
+.PHONY : libbcrypt/crypt_blowfish/crypt_blowfish.s
+
+# target to generate assembly for a file
+libbcrypt/crypt_blowfish/crypt_blowfish.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/libbcrypt/crypt_blowfish/crypt_blowfish.c.s
+.PHONY : libbcrypt/crypt_blowfish/crypt_blowfish.c.s
+
+libbcrypt/crypt_blowfish/crypt_gensalt.o: libbcrypt/crypt_blowfish/crypt_gensalt.c.o
+.PHONY : libbcrypt/crypt_blowfish/crypt_gensalt.o
+
+# target to build an object file
+libbcrypt/crypt_blowfish/crypt_gensalt.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/libbcrypt/crypt_blowfish/crypt_gensalt.c.o
+.PHONY : libbcrypt/crypt_blowfish/crypt_gensalt.c.o
+
+libbcrypt/crypt_blowfish/crypt_gensalt.i: libbcrypt/crypt_blowfish/crypt_gensalt.c.i
+.PHONY : libbcrypt/crypt_blowfish/crypt_gensalt.i
+
+# target to preprocess a source file
+libbcrypt/crypt_blowfish/crypt_gensalt.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/libbcrypt/crypt_blowfish/crypt_gensalt.c.i
+.PHONY : libbcrypt/crypt_blowfish/crypt_gensalt.c.i
+
+libbcrypt/crypt_blowfish/crypt_gensalt.s: libbcrypt/crypt_blowfish/crypt_gensalt.c.s
+.PHONY : libbcrypt/crypt_blowfish/crypt_gensalt.s
+
+# target to generate assembly for a file
+libbcrypt/crypt_blowfish/crypt_gensalt.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/libbcrypt/crypt_blowfish/crypt_gensalt.c.s
+.PHONY : libbcrypt/crypt_blowfish/crypt_gensalt.c.s
+
+libbcrypt/crypt_blowfish/wrapper.o: libbcrypt/crypt_blowfish/wrapper.c.o
+.PHONY : libbcrypt/crypt_blowfish/wrapper.o
+
+# target to build an object file
+libbcrypt/crypt_blowfish/wrapper.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/libbcrypt/crypt_blowfish/wrapper.c.o
+.PHONY : libbcrypt/crypt_blowfish/wrapper.c.o
+
+libbcrypt/crypt_blowfish/wrapper.i: libbcrypt/crypt_blowfish/wrapper.c.i
+.PHONY : libbcrypt/crypt_blowfish/wrapper.i
+
+# target to preprocess a source file
+libbcrypt/crypt_blowfish/wrapper.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/libbcrypt/crypt_blowfish/wrapper.c.i
+.PHONY : libbcrypt/crypt_blowfish/wrapper.c.i
+
+libbcrypt/crypt_blowfish/wrapper.s: libbcrypt/crypt_blowfish/wrapper.c.s
+.PHONY : libbcrypt/crypt_blowfish/wrapper.s
+
+# target to generate assembly for a file
+libbcrypt/crypt_blowfish/wrapper.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/libbcrypt/crypt_blowfish/wrapper.c.s
+.PHONY : libbcrypt/crypt_blowfish/wrapper.c.s
+
 main.o: main.c.o
 .PHONY : main.o
 
@@ -594,6 +690,30 @@ main.s: main.c.s
 main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/main.c.s
 .PHONY : main.c.s
+
+models/User.o: models/User.c.o
+.PHONY : models/User.o
+
+# target to build an object file
+models/User.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/models/User.c.o
+.PHONY : models/User.c.o
+
+models/User.i: models/User.c.i
+.PHONY : models/User.i
+
+# target to preprocess a source file
+models/User.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/models/User.c.i
+.PHONY : models/User.c.i
+
+models/User.s: models/User.c.s
+.PHONY : models/User.s
+
+# target to generate assembly for a file
+models/User.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/models/User.c.s
+.PHONY : models/User.c.s
 
 sinastd/Date.o: sinastd/Date.c.o
 .PHONY : sinastd/Date.o
@@ -689,9 +809,24 @@ help:
 	@echo "... database/Migration.o"
 	@echo "... database/Migration.i"
 	@echo "... database/Migration.s"
+	@echo "... libbcrypt/bcrypt.o"
+	@echo "... libbcrypt/bcrypt.i"
+	@echo "... libbcrypt/bcrypt.s"
+	@echo "... libbcrypt/crypt_blowfish/crypt_blowfish.o"
+	@echo "... libbcrypt/crypt_blowfish/crypt_blowfish.i"
+	@echo "... libbcrypt/crypt_blowfish/crypt_blowfish.s"
+	@echo "... libbcrypt/crypt_blowfish/crypt_gensalt.o"
+	@echo "... libbcrypt/crypt_blowfish/crypt_gensalt.i"
+	@echo "... libbcrypt/crypt_blowfish/crypt_gensalt.s"
+	@echo "... libbcrypt/crypt_blowfish/wrapper.o"
+	@echo "... libbcrypt/crypt_blowfish/wrapper.i"
+	@echo "... libbcrypt/crypt_blowfish/wrapper.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... models/User.o"
+	@echo "... models/User.i"
+	@echo "... models/User.s"
 	@echo "... sinastd/Date.o"
 	@echo "... sinastd/Date.i"
 	@echo "... sinastd/Date.s"

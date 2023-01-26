@@ -24,7 +24,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 15,
+				"line" : 21,
 				"parent" : 0
 			}
 		]
@@ -35,7 +35,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : " -lsqlite3 -g"
+					"fragment" : " -lsqlite3 -lm -g"
 				}
 			],
 			"language" : "C",
@@ -45,7 +45,12 @@
 				1,
 				2,
 				3,
-				4
+				4,
+				5,
+				6,
+				7,
+				8,
+				9
 			]
 		}
 	],
@@ -55,7 +60,7 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "-lsqlite3 -g",
+				"fragment" : "-lsqlite3 -lm -g",
 				"role" : "flags"
 			},
 			{
@@ -82,7 +87,12 @@
 				1,
 				2,
 				3,
-				4
+				4,
+				5,
+				6,
+				7,
+				8,
+				9
 			]
 		}
 	],
@@ -116,6 +126,36 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "sinastd/Parser.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "models/User.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libbcrypt/bcrypt.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libbcrypt/crypt_blowfish/crypt_blowfish.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libbcrypt/crypt_blowfish/crypt_gensalt.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libbcrypt/crypt_blowfish/wrapper.c",
 			"sourceGroupIndex" : 0
 		}
 	],

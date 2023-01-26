@@ -4,6 +4,7 @@ CMakeFiles/FoodReservation.dir/database/Migration.c.o: \
  /home/sinasadeghi/Programming/Clang/Project/database/DbManager.h \
  /usr/include/sqlite3.h \
  /usr/lib/gcc/x86_64-redhat-linux/12/include/stdarg.h \
+ /usr/lib/gcc/x86_64-redhat-linux/12/include/stdbool.h \
  /home/sinasadeghi/Programming/Clang/Project/database/Migration.h \
  /home/sinasadeghi/Programming/Clang/Project/database/../sinastd/Date.h \
  /usr/include/stdlib.h /usr/include/bits/libc-header-start.h \
@@ -33,11 +34,9 @@ CMakeFiles/FoodReservation.dir/database/Migration.c.o: \
  /usr/include/bits/types/__fpos_t.h /usr/include/bits/types/__mbstate_t.h \
  /usr/include/bits/types/__fpos64_t.h /usr/include/bits/types/__FILE.h \
  /usr/include/bits/types/FILE.h /usr/include/bits/types/struct_FILE.h \
- /usr/include/bits/stdio_lim.h \
- /usr/lib/gcc/x86_64-redhat-linux/12/include/stdbool.h \
- /usr/include/dirent.h /usr/include/bits/dirent.h \
- /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h \
- /usr/include/linux/limits.h \
+ /usr/include/bits/stdio_lim.h /usr/include/dirent.h \
+ /usr/include/bits/dirent.h /usr/include/bits/posix1_lim.h \
+ /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
  /usr/include/bits/pthread_stack_min-dynamic.h \
  /usr/include/bits/pthread_stack_min.h /usr/include/bits/dirent_ext.h \
  /usr/include/string.h /usr/include/bits/types/locale_t.h \

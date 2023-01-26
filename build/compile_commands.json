@@ -1,27 +1,52 @@
 [
 {
   "directory": "/home/sinasadeghi/Programming/Clang/Project/build",
-  "command": "/usr/bin/gcc    -lsqlite3 -g -o CMakeFiles/FoodReservation.dir/main.c.o -c /home/sinasadeghi/Programming/Clang/Project/main.c",
+  "command": "/usr/bin/gcc    -lsqlite3 -lm -g -o CMakeFiles/FoodReservation.dir/main.c.o -c /home/sinasadeghi/Programming/Clang/Project/main.c",
   "file": "/home/sinasadeghi/Programming/Clang/Project/main.c"
 },
 {
   "directory": "/home/sinasadeghi/Programming/Clang/Project/build",
-  "command": "/usr/bin/gcc    -lsqlite3 -g -o CMakeFiles/FoodReservation.dir/database/DbManager.c.o -c /home/sinasadeghi/Programming/Clang/Project/database/DbManager.c",
+  "command": "/usr/bin/gcc    -lsqlite3 -lm -g -o CMakeFiles/FoodReservation.dir/database/DbManager.c.o -c /home/sinasadeghi/Programming/Clang/Project/database/DbManager.c",
   "file": "/home/sinasadeghi/Programming/Clang/Project/database/DbManager.c"
 },
 {
   "directory": "/home/sinasadeghi/Programming/Clang/Project/build",
-  "command": "/usr/bin/gcc    -lsqlite3 -g -o CMakeFiles/FoodReservation.dir/database/Migration.c.o -c /home/sinasadeghi/Programming/Clang/Project/database/Migration.c",
+  "command": "/usr/bin/gcc    -lsqlite3 -lm -g -o CMakeFiles/FoodReservation.dir/database/Migration.c.o -c /home/sinasadeghi/Programming/Clang/Project/database/Migration.c",
   "file": "/home/sinasadeghi/Programming/Clang/Project/database/Migration.c"
 },
 {
   "directory": "/home/sinasadeghi/Programming/Clang/Project/build",
-  "command": "/usr/bin/gcc    -lsqlite3 -g -o CMakeFiles/FoodReservation.dir/sinastd/Date.c.o -c /home/sinasadeghi/Programming/Clang/Project/sinastd/Date.c",
+  "command": "/usr/bin/gcc    -lsqlite3 -lm -g -o CMakeFiles/FoodReservation.dir/sinastd/Date.c.o -c /home/sinasadeghi/Programming/Clang/Project/sinastd/Date.c",
   "file": "/home/sinasadeghi/Programming/Clang/Project/sinastd/Date.c"
 },
 {
   "directory": "/home/sinasadeghi/Programming/Clang/Project/build",
-  "command": "/usr/bin/gcc    -lsqlite3 -g -o CMakeFiles/FoodReservation.dir/sinastd/Parser.c.o -c /home/sinasadeghi/Programming/Clang/Project/sinastd/Parser.c",
+  "command": "/usr/bin/gcc    -lsqlite3 -lm -g -o CMakeFiles/FoodReservation.dir/sinastd/Parser.c.o -c /home/sinasadeghi/Programming/Clang/Project/sinastd/Parser.c",
   "file": "/home/sinasadeghi/Programming/Clang/Project/sinastd/Parser.c"
+},
+{
+  "directory": "/home/sinasadeghi/Programming/Clang/Project/build",
+  "command": "/usr/bin/gcc    -lsqlite3 -lm -g -o CMakeFiles/FoodReservation.dir/models/User.c.o -c /home/sinasadeghi/Programming/Clang/Project/models/User.c",
+  "file": "/home/sinasadeghi/Programming/Clang/Project/models/User.c"
+},
+{
+  "directory": "/home/sinasadeghi/Programming/Clang/Project/build",
+  "command": "/usr/bin/gcc    -lsqlite3 -lm -g -o CMakeFiles/FoodReservation.dir/libbcrypt/bcrypt.c.o -c /home/sinasadeghi/Programming/Clang/Project/libbcrypt/bcrypt.c",
+  "file": "/home/sinasadeghi/Programming/Clang/Project/libbcrypt/bcrypt.c"
+},
+{
+  "directory": "/home/sinasadeghi/Programming/Clang/Project/build",
+  "command": "/usr/bin/gcc    -lsqlite3 -lm -g -o CMakeFiles/FoodReservation.dir/libbcrypt/crypt_blowfish/crypt_blowfish.c.o -c /home/sinasadeghi/Programming/Clang/Project/libbcrypt/crypt_blowfish/crypt_blowfish.c",
+  "file": "/home/sinasadeghi/Programming/Clang/Project/libbcrypt/crypt_blowfish/crypt_blowfish.c"
+},
+{
+  "directory": "/home/sinasadeghi/Programming/Clang/Project/build",
+  "command": "/usr/bin/gcc    -lsqlite3 -lm -g -o CMakeFiles/FoodReservation.dir/libbcrypt/crypt_blowfish/crypt_gensalt.c.o -c /home/sinasadeghi/Programming/Clang/Project/libbcrypt/crypt_blowfish/crypt_gensalt.c",
+  "file": "/home/sinasadeghi/Programming/Clang/Project/libbcrypt/crypt_blowfish/crypt_gensalt.c"
+},
+{
+  "directory": "/home/sinasadeghi/Programming/Clang/Project/build",
+  "command": "/usr/bin/gcc    -lsqlite3 -lm -g -o CMakeFiles/FoodReservation.dir/libbcrypt/crypt_blowfish/wrapper.c.o -c /home/sinasadeghi/Programming/Clang/Project/libbcrypt/crypt_blowfish/wrapper.c",
+  "file": "/home/sinasadeghi/Programming/Clang/Project/libbcrypt/crypt_blowfish/wrapper.c"
 }
 ]

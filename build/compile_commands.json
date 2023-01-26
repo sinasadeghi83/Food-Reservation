@@ -36,6 +36,16 @@
 },
 {
   "directory": "/home/sinasadeghi/Programming/Clang/Project/build",
+  "command": "/usr/bin/gcc    -lsqlite3 -lm -g -o CMakeFiles/FoodReservation.dir/views/console.c.o -c /home/sinasadeghi/Programming/Clang/Project/views/console.c",
+  "file": "/home/sinasadeghi/Programming/Clang/Project/views/console.c"
+},
+{
+  "directory": "/home/sinasadeghi/Programming/Clang/Project/build",
+  "command": "/usr/bin/gcc    -lsqlite3 -lm -g -o CMakeFiles/FoodReservation.dir/controllers/UserController.c.o -c /home/sinasadeghi/Programming/Clang/Project/controllers/UserController.c",
+  "file": "/home/sinasadeghi/Programming/Clang/Project/controllers/UserController.c"
+},
+{
+  "directory": "/home/sinasadeghi/Programming/Clang/Project/build",
   "command": "/usr/bin/gcc    -lsqlite3 -lm -g -o CMakeFiles/FoodReservation.dir/libbcrypt/bcrypt.c.o -c /home/sinasadeghi/Programming/Clang/Project/libbcrypt/bcrypt.c",
   "file": "/home/sinasadeghi/Programming/Clang/Project/libbcrypt/bcrypt.c"
 },

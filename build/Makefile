@@ -523,6 +523,30 @@ FoodReservation/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/build
 .PHONY : FoodReservation/fast
 
+controllers/UserController.o: controllers/UserController.c.o
+.PHONY : controllers/UserController.o
+
+# target to build an object file
+controllers/UserController.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/controllers/UserController.c.o
+.PHONY : controllers/UserController.c.o
+
+controllers/UserController.i: controllers/UserController.c.i
+.PHONY : controllers/UserController.i
+
+# target to preprocess a source file
+controllers/UserController.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/controllers/UserController.c.i
+.PHONY : controllers/UserController.c.i
+
+controllers/UserController.s: controllers/UserController.c.s
+.PHONY : controllers/UserController.s
+
+# target to generate assembly for a file
+controllers/UserController.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/controllers/UserController.c.s
+.PHONY : controllers/UserController.c.s
+
 database/DbManager.o: database/DbManager.c.o
 .PHONY : database/DbManager.o
 
@@ -787,6 +811,30 @@ sinastd/Parser.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/sinastd/Parser.c.s
 .PHONY : sinastd/Parser.c.s
 
+views/console.o: views/console.c.o
+.PHONY : views/console.o
+
+# target to build an object file
+views/console.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/views/console.c.o
+.PHONY : views/console.c.o
+
+views/console.i: views/console.c.i
+.PHONY : views/console.i
+
+# target to preprocess a source file
+views/console.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/views/console.c.i
+.PHONY : views/console.c.i
+
+views/console.s: views/console.c.s
+.PHONY : views/console.s
+
+# target to generate assembly for a file
+views/console.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/views/console.c.s
+.PHONY : views/console.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -827,6 +875,9 @@ help:
 	@echo "... NightlyTest"
 	@echo "... NightlyUpdate"
 	@echo "... FoodReservation"
+	@echo "... controllers/UserController.o"
+	@echo "... controllers/UserController.i"
+	@echo "... controllers/UserController.s"
 	@echo "... database/DbManager.o"
 	@echo "... database/DbManager.i"
 	@echo "... database/DbManager.s"
@@ -860,6 +911,9 @@ help:
 	@echo "... sinastd/Parser.o"
 	@echo "... sinastd/Parser.i"
 	@echo "... sinastd/Parser.s"
+	@echo "... views/console.o"
+	@echo "... views/console.i"
+	@echo "... views/console.s"
 .PHONY : help
 
 

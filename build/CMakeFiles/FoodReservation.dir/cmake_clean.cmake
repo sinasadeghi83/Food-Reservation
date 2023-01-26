@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/FoodReservation.dir/controllers/UserController.c.o"
+  "CMakeFiles/FoodReservation.dir/controllers/UserController.c.o.d"
   "CMakeFiles/FoodReservation.dir/database/DbManager.c.o"
   "CMakeFiles/FoodReservation.dir/database/DbManager.c.o.d"
   "CMakeFiles/FoodReservation.dir/database/Migration.c.o"
@@ -21,6 +23,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/FoodReservation.dir/sinastd/Error.c.o.d"
   "CMakeFiles/FoodReservation.dir/sinastd/Parser.c.o"
   "CMakeFiles/FoodReservation.dir/sinastd/Parser.c.o.d"
+  "CMakeFiles/FoodReservation.dir/views/console.c.o"
+  "CMakeFiles/FoodReservation.dir/views/console.c.o.d"
   "FoodReservation"
   "FoodReservation.pdb"
 )

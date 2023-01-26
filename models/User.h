@@ -38,10 +38,13 @@ void UserInitialise(User *this, char *username, char *password, char *fname, cha
 User *UserCreate(char *username, char *password, char *fname, char *lname, char *national_code, Date *birth_date, UserGender gender, UserType type);
 void UserFree(User *this);
 void UserFreeArray(User **users);
+void UserFreeFromArray(User **users, int n);
 void UserSetPassword(User *this, char *password);
 bool UserVerifyPassword(User *this, char *password);
 char *UserTypeString(User *this);
 char *UserGenderString(User *this);
+UserType UserStringToType(char *type);
+UserGender UserStringToGender(char *gender);
 Error *UserSave(User *this);
 User **UserFind(const char *whereCols[], const char *whereValues[]);
 #endif

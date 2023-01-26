@@ -36,4 +36,5 @@ CMakeFiles/FoodReservation.dir/main.c.o: \
  /home/sinasadeghi/Programming/Clang/Project/models/../sinastd/Date.h \
  /home/sinasadeghi/Programming/Clang/Project/models/../sinastd/Error.h \
  /home/sinasadeghi/Programming/Clang/Project/sinastd/Date.h \
- /home/sinasadeghi/Programming/Clang/Project/sinastd/Error.h
+ /home/sinasadeghi/Programming/Clang/Project/sinastd/Error.h \
+ /home/sinasadeghi/Programming/Clang/Project/views/console.h

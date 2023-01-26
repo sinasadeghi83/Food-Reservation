@@ -1,6 +1,6 @@
 CREATE TABLE IF NOT EXISTS user (
     username VARCHAR(255) PRIMARY KEY,
-    password VARCHAR(255) NOT NULL,
+    password VARCHAR(300) NOT NULL,
     type VARCHAR(255) CHECK( type IN ('admin', 'student') ) NOT NULL DEFAULT 'student',
     fname VARCHAR(255) NOT NULL,
     lname VARCHAR(255) NOT NULL,

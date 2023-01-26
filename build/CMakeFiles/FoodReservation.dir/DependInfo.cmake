@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/sinasadeghi/Programming/Clang/Project/controllers/UserController.c" "CMakeFiles/FoodReservation.dir/controllers/UserController.c.o" "gcc" "CMakeFiles/FoodReservation.dir/controllers/UserController.c.o.d"
   "/home/sinasadeghi/Programming/Clang/Project/database/DbManager.c" "CMakeFiles/FoodReservation.dir/database/DbManager.c.o" "gcc" "CMakeFiles/FoodReservation.dir/database/DbManager.c.o.d"
   "/home/sinasadeghi/Programming/Clang/Project/database/Migration.c" "CMakeFiles/FoodReservation.dir/database/Migration.c.o" "gcc" "CMakeFiles/FoodReservation.dir/database/Migration.c.o.d"
   "/home/sinasadeghi/Programming/Clang/Project/libbcrypt/bcrypt.c" "CMakeFiles/FoodReservation.dir/libbcrypt/bcrypt.c.o" "gcc" "CMakeFiles/FoodReservation.dir/libbcrypt/bcrypt.c.o.d"
@@ -19,6 +20,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/sinasadeghi/Programming/Clang/Project/sinastd/Date.c" "CMakeFiles/FoodReservation.dir/sinastd/Date.c.o" "gcc" "CMakeFiles/FoodReservation.dir/sinastd/Date.c.o.d"
   "/home/sinasadeghi/Programming/Clang/Project/sinastd/Error.c" "CMakeFiles/FoodReservation.dir/sinastd/Error.c.o" "gcc" "CMakeFiles/FoodReservation.dir/sinastd/Error.c.o.d"
   "/home/sinasadeghi/Programming/Clang/Project/sinastd/Parser.c" "CMakeFiles/FoodReservation.dir/sinastd/Parser.c.o" "gcc" "CMakeFiles/FoodReservation.dir/sinastd/Parser.c.o.d"
+  "/home/sinasadeghi/Programming/Clang/Project/views/console.c" "CMakeFiles/FoodReservation.dir/views/console.c.o" "gcc" "CMakeFiles/FoodReservation.dir/views/console.c.o.d"
   )
 
 # Targets to which this target links.

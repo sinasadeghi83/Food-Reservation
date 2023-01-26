@@ -13,6 +13,8 @@ set(SOURCES main.c
             sinastd/Parser.c
             sinastd/Error.c
             models/User.c
+            views/console.c
+            controllers/UserController.c
             libbcrypt/bcrypt.c
             libbcrypt/crypt_blowfish/crypt_blowfish.c
             libbcrypt/crypt_blowfish/crypt_gensalt.c

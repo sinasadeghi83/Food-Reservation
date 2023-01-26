@@ -68,6 +68,10 @@ void UserFree(User *this)
 // Free array of users
 void UserFreeArray(User **users)
 {
+    if (users == NULL)
+    {
+        return;
+    }
     for (int i = 0; users[i] != NULL; i++)
     {
         UserFree(users[i]);
@@ -75,28 +79,42 @@ void UserFreeArray(User **users)
     free(users);
 }
 
-// Set the password (hashed with bcrypt)
-void UserSetPassword(User *this, char *password)
+// Free array of users
+void UserFreeFromArray(User **users, int n)
 {
-    int ret;
-    char salt[BCRYPT_HASHSIZE];
-    char hash[BCRYPT_HASHSIZE];
-    ret = bcrypt_gensalt(12, salt);
-    assert(ret == 0);
-    ret = bcrypt_hashpw(password, salt, hash);
-    assert(ret == 0);
-    this->password = malloc(strlen(hash));
-    strcpy(this->password, hash);
+    for (int i = 0; users[i] != NULL; i++)
+    {
+        if (i < n)
+        {
+            continue;
+        }
+        UserFree(users[i]);
+    }
+    free(users);
 }
 
-// Verify hashed password using bcrypt
-bool UserVerifyPassword(User *this, char *password)
-{
-    int ret;
-    ret = bcrypt_checkpw(password, this->password);
-    assert(ret != -1);
-    return ret == 0;
-}
+// Set the password (hashed with bcrypt)
+// void UserSetPassword(User *this, char *password)
+// {
+//     int ret;
+//     char salt[BCRYPT_HASHSIZE];
+//     char hash[BCRYPT_HASHSIZE];
+//     ret = bcrypt_gensalt(12, salt);
+//     assert(ret == 0);
+//     ret = bcrypt_hashpw(password, salt, hash);
+//     assert(ret == 0);
+//     this->password = malloc(strlen(hash) + 1);
+//     strcpy(this->password, hash);
+// }
+
+// // Verify hashed password using bcrypt
+// bool UserVerifyPassword(User *this, char *password)
+// {
+//     int ret;
+//     ret = bcrypt_checkpw(password, this->password);
+//     assert(ret != -1);
+//     return ret == 0;
+// }
 
 // Returns user type as string
 char *UserTypeString(User *this)
@@ -124,6 +142,32 @@ char *UserGenderString(User *this)
     }
 }
 
+// Returns user gender from string
+UserGender UserStringToGender(char *gender)
+{
+    if (strcmp(gender, "female") == 0)
+    {
+        return USER_FEMALE;
+    }
+    else
+    {
+        return USER_MALE;
+    }
+}
+
+// Returns user type from string
+UserType UserStringToType(char *type)
+{
+    if (strcmp(type, "admin") == 0)
+    {
+        return USER_ADMIN;
+    }
+    else
+    {
+        return USER_STUDENT;
+    }
+}
+
 // Save the user to the database using DbManager
 Error *UserSave(User *this)
 {
@@ -136,7 +180,6 @@ Error *UserSave(User *this)
         error->msg = "User already exists";
         return error;
     }
-    UserFreeArray(users);
     char *type = UserTypeString(this);
     char *gender = UserGenderString(this);
     char *date = DateToString(this->birth_date);
@@ -151,10 +194,8 @@ Error *UserSave(User *this)
         date,
         NULL};
     // Free the strings
-    free(type);
-    free(gender);
     free(date);
-    error->isAny = DbInsert(USER_TABLE, USER_COLS, values);
+    error->isAny = !DbInsert(USER_TABLE, USER_COLS, values);
     error->msg = NULL;
     return error;
 }
@@ -164,25 +205,8 @@ Error *UserSave(User *this)
 int UserSelectCallback(void *data, int argc, char **argv, char **azColName)
 {
     User **users = (User **)(data);
-    UserGender gender;
-    if (strcmp(argv[6], "female") == 0)
-    {
-        gender = USER_FEMALE;
-    }
-    else
-    {
-        gender = USER_MALE;
-    }
-
-    UserType type;
-    if (strcmp(argv[2], "admin") == 0)
-    {
-        type = USER_ADMIN;
-    }
-    else
-    {
-        type = USER_STUDENT;
-    }
+    UserGender gender = UserStringToGender(argv[6]);
+    UserType type = UserStringToType(argv[2]);
     users[selectIndex++] = UserCreate(argv[0], argv[1], argv[3], argv[4], argv[5], CreateDateFromString(argv[7]), gender, type);
     users[selectIndex] = NULL;
     return 0;
@@ -205,22 +229,18 @@ User **UserFind(const char *whereCols[], const char *whereValues[])
     }
 }
 
-// // Set the password without encyrption
-// void UserSetPassword(User *this, char *password)
-// {
-//     this->password = malloc(strlen(password) + 1);
-//     strcpy(this->password, password);
-// }
+// Set the password without encyrption
+void UserSetPassword(User *this, char *password)
+{
+    this->password = malloc(strlen(password) + 1);
+    strcpy(this->password, password);
+}
 
-// // Verify password without encyrption
-// bool UserVerifyPassword(User *this, char *password)
-// {
-//     return strcmp(this->password, password) == 0;
-// }
-
-// bool saveUser(User *this)
-// {
-// }
+// Verify password without encyrption
+bool UserVerifyPassword(User *this, char *password)
+{
+    return strcmp(this->password, password) == 0;
+}
 
 // // Set the password using gcrypt
 // void UserSetPassword(User *this, char *password)

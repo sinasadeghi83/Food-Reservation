@@ -1,21 +1,16 @@
-CMakeFiles/FoodReservation.dir/models/User.c.o: \
- /home/sinasadeghi/Programming/Clang/Project/models/User.c \
+CMakeFiles/FoodReservation.dir/sinastd/Error.c.o: \
+ /home/sinasadeghi/Programming/Clang/Project/sinastd/Error.c \
  /usr/include/stdc-predef.h \
- /home/sinasadeghi/Programming/Clang/Project/models/User.h \
+ /home/sinasadeghi/Programming/Clang/Project/sinastd/Error.h \
  /usr/lib/gcc/x86_64-redhat-linux/12/include/stdbool.h \
- /home/sinasadeghi/Programming/Clang/Project/models/../sinastd/Date.h \
- /home/sinasadeghi/Programming/Clang/Project/models/../sinastd/Error.h \
- /home/sinasadeghi/Programming/Clang/Project/models/../libbcrypt/bcrypt.h \
- /home/sinasadeghi/Programming/Clang/Project/models/../database/DbManager.h \
- /usr/include/sqlite3.h \
- /usr/lib/gcc/x86_64-redhat-linux/12/include/stdarg.h \
- /usr/include/assert.h /usr/include/features.h \
- /usr/include/features-time64.h /usr/include/bits/wordsize.h \
- /usr/include/bits/timesize.h /usr/include/sys/cdefs.h \
- /usr/include/bits/long-double.h /usr/include/gnu/stubs.h \
- /usr/include/gnu/stubs-64.h /usr/include/stdlib.h \
- /usr/include/bits/libc-header-start.h \
+ /usr/include/string.h /usr/include/bits/libc-header-start.h \
+ /usr/include/features.h /usr/include/features-time64.h \
+ /usr/include/bits/wordsize.h /usr/include/bits/timesize.h \
+ /usr/include/sys/cdefs.h /usr/include/bits/long-double.h \
+ /usr/include/gnu/stubs.h /usr/include/gnu/stubs-64.h \
  /usr/lib/gcc/x86_64-redhat-linux/12/include/stddef.h \
+ /usr/include/bits/types/locale_t.h /usr/include/bits/types/__locale_t.h \
+ /usr/include/strings.h /usr/include/stdlib.h \
  /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h \
  /usr/include/bits/floatn.h /usr/include/bits/floatn-common.h \
  /usr/include/sys/types.h /usr/include/bits/types.h \
@@ -33,6 +28,4 @@ CMakeFiles/FoodReservation.dir/models/User.c.o: \
  /usr/include/bits/pthreadtypes-arch.h \
  /usr/include/bits/atomic_wide_counter.h /usr/include/bits/struct_mutex.h \
  /usr/include/bits/struct_rwlock.h /usr/include/alloca.h \
- /usr/include/bits/stdlib-float.h /usr/include/string.h \
- /usr/include/bits/types/locale_t.h /usr/include/bits/types/__locale_t.h \
- /usr/include/strings.h
+ /usr/include/bits/stdlib-float.h

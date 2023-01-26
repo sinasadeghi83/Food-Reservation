@@ -26,6 +26,11 @@
 },
 {
   "directory": "/home/sinasadeghi/Programming/Clang/Project/build",
+  "command": "/usr/bin/gcc    -lsqlite3 -lm -g -o CMakeFiles/FoodReservation.dir/sinastd/Error.c.o -c /home/sinasadeghi/Programming/Clang/Project/sinastd/Error.c",
+  "file": "/home/sinasadeghi/Programming/Clang/Project/sinastd/Error.c"
+},
+{
+  "directory": "/home/sinasadeghi/Programming/Clang/Project/build",
   "command": "/usr/bin/gcc    -lsqlite3 -lm -g -o CMakeFiles/FoodReservation.dir/models/User.c.o -c /home/sinasadeghi/Programming/Clang/Project/models/User.c",
   "file": "/home/sinasadeghi/Programming/Clang/Project/models/User.c"
 },

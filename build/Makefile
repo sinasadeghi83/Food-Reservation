@@ -739,6 +739,30 @@ sinastd/Date.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/sinastd/Date.c.s
 .PHONY : sinastd/Date.c.s
 
+sinastd/Error.o: sinastd/Error.c.o
+.PHONY : sinastd/Error.o
+
+# target to build an object file
+sinastd/Error.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/sinastd/Error.c.o
+.PHONY : sinastd/Error.c.o
+
+sinastd/Error.i: sinastd/Error.c.i
+.PHONY : sinastd/Error.i
+
+# target to preprocess a source file
+sinastd/Error.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/sinastd/Error.c.i
+.PHONY : sinastd/Error.c.i
+
+sinastd/Error.s: sinastd/Error.c.s
+.PHONY : sinastd/Error.s
+
+# target to generate assembly for a file
+sinastd/Error.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/sinastd/Error.c.s
+.PHONY : sinastd/Error.c.s
+
 sinastd/Parser.o: sinastd/Parser.c.o
 .PHONY : sinastd/Parser.o
 
@@ -830,6 +854,9 @@ help:
 	@echo "... sinastd/Date.o"
 	@echo "... sinastd/Date.i"
 	@echo "... sinastd/Date.s"
+	@echo "... sinastd/Error.o"
+	@echo "... sinastd/Error.i"
+	@echo "... sinastd/Error.s"
 	@echo "... sinastd/Parser.o"
 	@echo "... sinastd/Parser.i"
 	@echo "... sinastd/Parser.s"

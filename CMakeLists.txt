@@ -11,6 +11,7 @@ set(SOURCES main.c
             database/Migration.c
             sinastd/Date.c
             sinastd/Parser.c
+            sinastd/Error.c
             models/User.c
             libbcrypt/bcrypt.c
             libbcrypt/crypt_blowfish/crypt_blowfish.c

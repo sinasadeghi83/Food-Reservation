@@ -8,6 +8,7 @@
 #include <assert.h>
 #include <stdlib.h>
 #include <string.h>
+#include "../sinastd/Error.h"
 
 #define USER_TABLE "user"
 #define MAX_USER_FETCH 100
@@ -22,6 +23,8 @@ const char *USER_COLS[9] = {
     "gender",
     "birth_date",
     NULL};
+
+static int selectIndex = 0;
 
 User *UserCreate(char *username, char *password, char *fname, char *lname, char *national_code, Date *birth_date, UserGender gender, UserType type)
 {
@@ -50,7 +53,7 @@ void UserInitialise(User *this, char *username, char *password, char *fname, cha
 }
 
 // Free the user data
-void freeUser(User *this)
+void UserFree(User *this)
 {
     // Free all the chars
     free(this->username);
@@ -60,6 +63,16 @@ void freeUser(User *this)
     free(this->national_code);
     // Free the user
     free(this);
+}
+
+// Free array of users
+void UserFreeArray(User **users)
+{
+    for (int i = 0; users[i] != NULL; i++)
+    {
+        UserFree(users[i]);
+    }
+    free(users);
 }
 
 // Set the password (hashed with bcrypt)
@@ -112,29 +125,47 @@ char *UserGenderString(User *this)
 }
 
 // Save the user to the database using DbManager
-bool UserSave(User *this)
+Error *UserSave(User *this)
 {
+    Error *error = ErrorCreate(false, NULL);
+    User **users = UserFind((const char *[]){"username", NULL}, (const char *[]){this->username, NULL});
+    if (users != NULL)
+    {
+        UserFreeArray(users);
+        error->isAny = true;
+        error->msg = "User already exists";
+        return error;
+    }
+    UserFreeArray(users);
+    char *type = UserTypeString(this);
+    char *gender = UserGenderString(this);
+    char *date = DateToString(this->birth_date);
     const char *values[] = {
         this->username,
         this->password,
-        UserTypeString(this),
+        type,
         this->fname,
         this->lname,
         this->national_code,
-        UserGenderString(this),
-        DateToString(this->birth_date),
+        gender,
+        date,
         NULL};
-    return DbInsert(USER_TABLE, USER_COLS, values);
+    // Free the strings
+    free(type);
+    free(gender);
+    free(date);
+    error->isAny = DbInsert(USER_TABLE, USER_COLS, values);
+    error->msg = NULL;
+    return error;
 }
 
 // Callback function for DbSelect
 // This function will fill in users array with the result of the query
 int UserSelectCallback(void *data, int argc, char **argv, char **azColName)
 {
-    static int index = 0;
     User **users = (User **)(data);
     UserGender gender;
-    if (argv[6] == "female")
+    if (strcmp(argv[6], "female") == 0)
     {
         gender = USER_FEMALE;
     }
@@ -144,7 +175,7 @@ int UserSelectCallback(void *data, int argc, char **argv, char **azColName)
     }
 
     UserType type;
-    if (argv[2] == "admin")
+    if (strcmp(argv[2], "admin") == 0)
     {
         type = USER_ADMIN;
     }
@@ -152,16 +183,26 @@ int UserSelectCallback(void *data, int argc, char **argv, char **azColName)
     {
         type = USER_STUDENT;
     }
-    users[index++] = UserCreate(argv[0], argv[1], argv[3], argv[4], argv[5], CreateDateFromString(argv[7]), gender, type);
+    users[selectIndex++] = UserCreate(argv[0], argv[1], argv[3], argv[4], argv[5], CreateDateFromString(argv[7]), gender, type);
+    users[selectIndex] = NULL;
     return 0;
 }
 
 User **UserFind(const char *whereCols[], const char *whereValues[])
 {
     User **users = calloc(MAX_USER_FETCH, sizeof(User *)); // database result
+    users[0] = NULL;
     int i = 0;
     bool status = DbSelect(USER_TABLE, whereCols, whereValues, UserSelectCallback, (void *)users);
-    return status ? users : NULL;
+    selectIndex = 0;
+    if (!status || users[0] == NULL)
+    {
+        return NULL;
+    }
+    else
+    {
+        return users;
+    }
 }
 
 // // Set the password without encyrption

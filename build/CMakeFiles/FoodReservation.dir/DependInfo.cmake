@@ -17,6 +17,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/sinasadeghi/Programming/Clang/Project/main.c" "CMakeFiles/FoodReservation.dir/main.c.o" "gcc" "CMakeFiles/FoodReservation.dir/main.c.o.d"
   "/home/sinasadeghi/Programming/Clang/Project/models/User.c" "CMakeFiles/FoodReservation.dir/models/User.c.o" "gcc" "CMakeFiles/FoodReservation.dir/models/User.c.o.d"
   "/home/sinasadeghi/Programming/Clang/Project/sinastd/Date.c" "CMakeFiles/FoodReservation.dir/sinastd/Date.c.o" "gcc" "CMakeFiles/FoodReservation.dir/sinastd/Date.c.o.d"
+  "/home/sinasadeghi/Programming/Clang/Project/sinastd/Error.c" "CMakeFiles/FoodReservation.dir/sinastd/Error.c.o" "gcc" "CMakeFiles/FoodReservation.dir/sinastd/Error.c.o.d"
   "/home/sinasadeghi/Programming/Clang/Project/sinastd/Parser.c" "CMakeFiles/FoodReservation.dir/sinastd/Parser.c.o" "gcc" "CMakeFiles/FoodReservation.dir/sinastd/Parser.c.o.d"
   )
 

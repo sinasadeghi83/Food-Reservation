@@ -31,7 +31,9 @@ CMakeFiles/FoodReservation.dir/main.c.o: \
  /usr/include/bits/atomic_wide_counter.h /usr/include/bits/struct_mutex.h \
  /usr/include/bits/struct_rwlock.h /usr/include/alloca.h \
  /usr/include/bits/stdlib-float.h \
- /home/sinasadeghi/Programming/Clang/Project/models/User.h \
  /usr/lib/gcc/x86_64-redhat-linux/12/include/stdbool.h \
+ /home/sinasadeghi/Programming/Clang/Project/models/User.h \
  /home/sinasadeghi/Programming/Clang/Project/models/../sinastd/Date.h \
- /home/sinasadeghi/Programming/Clang/Project/sinastd/Date.h
+ /home/sinasadeghi/Programming/Clang/Project/models/../sinastd/Error.h \
+ /home/sinasadeghi/Programming/Clang/Project/sinastd/Date.h \
+ /home/sinasadeghi/Programming/Clang/Project/sinastd/Error.h

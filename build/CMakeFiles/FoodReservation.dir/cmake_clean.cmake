@@ -17,6 +17,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/FoodReservation.dir/models/User.c.o.d"
   "CMakeFiles/FoodReservation.dir/sinastd/Date.c.o"
   "CMakeFiles/FoodReservation.dir/sinastd/Date.c.o.d"
+  "CMakeFiles/FoodReservation.dir/sinastd/Error.c.o"
+  "CMakeFiles/FoodReservation.dir/sinastd/Error.c.o.d"
   "CMakeFiles/FoodReservation.dir/sinastd/Parser.c.o"
   "CMakeFiles/FoodReservation.dir/sinastd/Parser.c.o.d"
   "FoodReservation"

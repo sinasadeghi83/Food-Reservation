@@ -171,7 +171,7 @@ bool DbInsert(const char *table, const char *cols[], const char *values[])
 
 // Fetching rows from database according to the table name and where cols and values statements
 // Using IN statement would look like : DbSelect("table", {"col1", "col2"}, {"IN (1,2,3)", "IN (4,5,6)"}, callback, NULL);
-// Todo: Add support for prevention of SQL injection
+// Added support for prevention of SQL injection
 bool DbSelect(const char *table, const char *whereCols[], const char *whereValues[], int (*callback)(void *, int, char **, char **), void *data)
 {
     openDb();

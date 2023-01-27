@@ -1,11 +1,11 @@
 1001#success
-1005#permission-denied
+1006#permission-denied
 1002#success
 1001#success
-1005#permission-denied
+1006#not-found
 1002#success
 1001#success
-1005#success
+1006#success
 1002#success
 1001#not-found
-1001#success
+1001#not-found

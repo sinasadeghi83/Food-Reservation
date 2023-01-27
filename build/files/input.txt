@@ -1,11 +1,11 @@
 1001#login#user:testt|password:1234
-1005#change-student-pass#user:aa2|new-pass:13579
+1006#remove-student#user:testt
 1002#logout#user:testt
 1001#login#user:aa2|password:test
-1005#change-student-pass#user:admin|new-pass:13579
+1006#remove-student#user:admin
 1002#logout#user:aa2
 1001#login#user:admin|password:admin
-1005#change-student-pass#user:testt|new-pass:13579
+1006#remove-student#user:testt
 1002#logout#user:admin
 1001#login#user:testt|password:1234
 1001#login#user:testt|password:13579

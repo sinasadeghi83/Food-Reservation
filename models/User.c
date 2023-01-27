@@ -249,6 +249,32 @@ Error *UserUpdate(User *this)
     return error;
 }
 
+// Delete the user from the database using DbManager
+Error *UserDelete(User *this)
+{
+    // Creating Error
+    Error *error = ErrorCreate(false, NULL, NULL);
+    // Check if user exists
+    User **users = UserFind((const char *[]){"username", NULL}, (const char *[]){this->username, NULL});
+    if (users == NULL)
+    {
+        UserFreeArray(users);
+        error->isAny = true;
+        error->msg = "User doesn't exists!";
+        error->testMsg = ERR_404;
+        return error;
+    }
+    UserFreeArray(users);
+    // Creating where
+    const char *whereCols[] = {"username", NULL};
+    const char *whereValues[] = {this->username, NULL};
+    // Query the DB
+    error->isAny = !DbDelete(USER_TABLE, whereCols, whereValues);
+    error->msg = NULL;
+    error->testMsg = NULL;
+    return error;
+}
+
 // Callback function for DbSelect
 // This function will fill in users array with the result of the query
 int UserSelectCallback(void *data, int argc, char **argv, char **azColName)

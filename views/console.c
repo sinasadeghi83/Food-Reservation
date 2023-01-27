@@ -76,7 +76,25 @@ bool ConsoleActionLogin()
     ConsoleScanPassword(password);
     printf("\n");
     // Login user
-    Error *err = UserActionLogin(username, password);
+    // Create params
+    Param **params = (Param **)malloc(sizeof(Param *) * 3);
+    params[0] = ParamCreate("user", username);
+    params[1] = ParamCreate("password", password);
+    params[2] = NULL;
+    Error *err = ErrorCreate(false, NULL, NULL);
+    if (ParamsValidate(params))
+    {
+        free(err);
+        err = UserActionLogin(params);
+    }
+    else
+    {
+        err->isAny = true;
+        err->msg = "Invalid inputs!";
+    }
+    // Free params
+    ParamsFree(params);
+    // Check if login was successful
     if (err->isAny)
     {
         printf("Error: %s\n", err->msg);
@@ -121,16 +139,16 @@ void ConsoleActionRegister()
     printf("1. Male\n");
     printf("2. Female\n");
     int genderIn;
-    UserGender gender;
+    char *gender;
     scanf("%d", &genderIn);
     // Handle gender using switch-case
     switch (genderIn)
     {
     case 1:
-        gender = USER_MALE;
+        gender = "male";
         break;
     case 2:
-        gender = USER_FEMALE;
+        gender = "female";
         break;
 
     default:
@@ -143,21 +161,43 @@ void ConsoleActionRegister()
     printf("1. Admin\n");
     printf("2. Student\n");
     int typeIn;
-    UserType type;
+    char *type;
     scanf("%d", &typeIn);
     switch (typeIn)
     {
     case 1:
-        type = USER_ADMIN;
+        type = "admin";
         break;
     case 2:
-        type = USER_STUDENT;
+        type = "student";
         break;
     default:
         printf("Invalid input!");
         return;
     }
-    Error *err = UserActionRegister(username, password, fname, lname, national_code, birth_date, gender, type);
+    // Register user
+    // Create params
+    Param **params = (Param **)malloc(sizeof(Param *) * 9);
+    params[0] = ParamCreate("user-id", username);
+    params[1] = ParamCreate("password", password);
+    params[2] = ParamCreate("name", fname);
+    params[3] = ParamCreate("family", lname);
+    params[4] = ParamCreate("national-id-code", national_code);
+    params[5] = ParamCreate("birthdate", birth_date);
+    params[6] = ParamCreate("gender", gender);
+    params[7] = ParamCreate("type", type);
+    params[8] = NULL;
+    // Validate params
+    if (!ParamsValidate(params))
+    {
+        printf("Invalid inputs!\n");
+        ParamsFree(params);
+        return;
+    }
+    // Register user
+    Error *err = UserActionRegister(params);
+    // Free params
+    ParamsFree(params);
     // Show error if there's any
     if (err->isAny)
     {
@@ -187,8 +227,14 @@ bool ConsoleActionLoggedInMenu()
     switch (choice)
     {
     case 1:
+        // Create Params
+        Param **params = (Param **)malloc(sizeof(Param *) * 2);
+        params[0] = ParamCreate("user", SessionUser->username);
+        params[1] = NULL;
         // Logout user
-        Error *err = UserActionLogout();
+        Error *err = UserActionLogout(params);
+        // Free params
+        ParamsFree(params);
         if (err->isAny)
         {
             printf("Error: %s\n", err->msg);

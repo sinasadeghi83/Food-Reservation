@@ -173,13 +173,14 @@ UserType UserStringToType(char *type)
 // Save the user to the database using DbManager
 Error *UserSave(User *this)
 {
-    Error *error = ErrorCreate(false, NULL);
+    Error *error = ErrorCreate(false, NULL, NULL);
     User **users = UserFind((const char *[]){"username", NULL}, (const char *[]){this->username, NULL});
     if (users != NULL)
     {
         UserFreeArray(users);
         error->isAny = true;
         error->msg = "User already exists";
+        error->testMsg = ERR_PERM;
         return error;
     }
     char *type = UserTypeString(this);
@@ -200,6 +201,7 @@ Error *UserSave(User *this)
     free(date);
     error->isAny = !DbInsert(USER_TABLE, USER_COLS, values);
     error->msg = NULL;
+    error->testMsg = NULL;
     return error;
 }
 
@@ -242,7 +244,7 @@ void UserSetPassword(User *this, char *password)
 // Verify password without encyrption
 bool UserVerifyPassword(User *this, char *password)
 {
-    return strcmp(this->password, password) == 0;
+    return strncmp(this->password, password, strlen(password)) == 0;
 }
 
 // // Set the password using gcrypt

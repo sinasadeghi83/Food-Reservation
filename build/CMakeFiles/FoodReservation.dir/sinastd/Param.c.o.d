@@ -1,6 +1,7 @@
-CMakeFiles/FoodReservation.dir/controllers/UserController.c.o: \
- /home/sinasadeghi/Programming/Clang/Project/controllers/UserController.c \
+CMakeFiles/FoodReservation.dir/sinastd/Param.c.o: \
+ /home/sinasadeghi/Programming/Clang/Project/sinastd/Param.c \
  /usr/include/stdc-predef.h \
+ /home/sinasadeghi/Programming/Clang/Project/sinastd/Param.h \
  /usr/lib/gcc/x86_64-redhat-linux/12/include/stdbool.h \
  /usr/include/stdlib.h /usr/include/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -27,10 +28,4 @@ CMakeFiles/FoodReservation.dir/controllers/UserController.c.o: \
  /usr/include/bits/struct_rwlock.h /usr/include/alloca.h \
  /usr/include/bits/stdlib-float.h /usr/include/string.h \
  /usr/include/bits/types/locale_t.h /usr/include/bits/types/__locale_t.h \
- /usr/include/strings.h \
- /home/sinasadeghi/Programming/Clang/Project/controllers/UserController.h \
- /home/sinasadeghi/Programming/Clang/Project/controllers/../sinastd/Error.h \
- /home/sinasadeghi/Programming/Clang/Project/controllers/../models/User.h \
- /home/sinasadeghi/Programming/Clang/Project/controllers/../models/../sinastd/Date.h \
- /home/sinasadeghi/Programming/Clang/Project/controllers/../models/../sinastd/Error.h \
- /home/sinasadeghi/Programming/Clang/Project/controllers/../sinastd/Param.h
+ /usr/include/strings.h

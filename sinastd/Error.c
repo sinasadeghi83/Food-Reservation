@@ -3,15 +3,15 @@
 #include <stdlib.h>
 
 // Create Error instance
-Error *ErrorCreate(bool isAny, char *msg)
+Error *ErrorCreate(bool isAny, char *msg, char *testMsg)
 {
     Error *error = malloc(sizeof(Error));
-    ErrorInitialise(error, isAny, msg);
+    ErrorInitialise(error, isAny, msg, testMsg);
     return error;
 }
 
 // Error initialiser
-void ErrorInitialise(Error *this, bool isAny, char *msg)
+void ErrorInitialise(Error *this, bool isAny, char *msg, char *testMsg)
 {
     this->isAny = isAny;
     if (msg != NULL)
@@ -22,6 +22,15 @@ void ErrorInitialise(Error *this, bool isAny, char *msg)
     else
     {
         this->msg = NULL;
+    }
+    if (testMsg != NULL)
+    {
+        this->testMsg = malloc(strlen(testMsg) + 1);
+        strcpy(this->testMsg, testMsg);
+    }
+    else
+    {
+        this->testMsg = NULL;
     }
 }
 

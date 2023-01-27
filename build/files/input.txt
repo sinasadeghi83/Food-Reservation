@@ -1,0 +1,2 @@
+1001#login#user:admin|password:admin
+1002#logout#user:admin

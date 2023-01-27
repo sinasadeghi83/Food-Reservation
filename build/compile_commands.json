@@ -31,13 +31,28 @@
 },
 {
   "directory": "/home/sinasadeghi/Programming/Clang/Project/build",
+  "command": "/usr/bin/gcc    -lsqlite3 -lm -g -o CMakeFiles/FoodReservation.dir/sinastd/Param.c.o -c /home/sinasadeghi/Programming/Clang/Project/sinastd/Param.c",
+  "file": "/home/sinasadeghi/Programming/Clang/Project/sinastd/Param.c"
+},
+{
+  "directory": "/home/sinasadeghi/Programming/Clang/Project/build",
   "command": "/usr/bin/gcc    -lsqlite3 -lm -g -o CMakeFiles/FoodReservation.dir/models/User.c.o -c /home/sinasadeghi/Programming/Clang/Project/models/User.c",
   "file": "/home/sinasadeghi/Programming/Clang/Project/models/User.c"
 },
 {
   "directory": "/home/sinasadeghi/Programming/Clang/Project/build",
+  "command": "/usr/bin/gcc    -lsqlite3 -lm -g -o CMakeFiles/FoodReservation.dir/models/TestCase.c.o -c /home/sinasadeghi/Programming/Clang/Project/models/TestCase.c",
+  "file": "/home/sinasadeghi/Programming/Clang/Project/models/TestCase.c"
+},
+{
+  "directory": "/home/sinasadeghi/Programming/Clang/Project/build",
   "command": "/usr/bin/gcc    -lsqlite3 -lm -g -o CMakeFiles/FoodReservation.dir/views/console.c.o -c /home/sinasadeghi/Programming/Clang/Project/views/console.c",
   "file": "/home/sinasadeghi/Programming/Clang/Project/views/console.c"
+},
+{
+  "directory": "/home/sinasadeghi/Programming/Clang/Project/build",
+  "command": "/usr/bin/gcc    -lsqlite3 -lm -g -o CMakeFiles/FoodReservation.dir/views/test.c.o -c /home/sinasadeghi/Programming/Clang/Project/views/test.c",
+  "file": "/home/sinasadeghi/Programming/Clang/Project/views/test.c"
 },
 {
   "directory": "/home/sinasadeghi/Programming/Clang/Project/build",

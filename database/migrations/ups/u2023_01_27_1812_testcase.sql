@@ -1,0 +1,6 @@
+CREATE TABLE "testcase" (
+	"id"	INTEGER NOT NULL UNIQUE,
+	"title"	VARCHAR(255) NOT NULL UNIQUE,
+	"valid_params"	VARCHAR(255) DEFAULT NULL,
+	PRIMARY KEY("id")
+);

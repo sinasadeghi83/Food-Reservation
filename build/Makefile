@@ -715,6 +715,30 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/main.c.s
 .PHONY : main.c.s
 
+models/TestCase.o: models/TestCase.c.o
+.PHONY : models/TestCase.o
+
+# target to build an object file
+models/TestCase.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/models/TestCase.c.o
+.PHONY : models/TestCase.c.o
+
+models/TestCase.i: models/TestCase.c.i
+.PHONY : models/TestCase.i
+
+# target to preprocess a source file
+models/TestCase.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/models/TestCase.c.i
+.PHONY : models/TestCase.c.i
+
+models/TestCase.s: models/TestCase.c.s
+.PHONY : models/TestCase.s
+
+# target to generate assembly for a file
+models/TestCase.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/models/TestCase.c.s
+.PHONY : models/TestCase.c.s
+
 models/User.o: models/User.c.o
 .PHONY : models/User.o
 
@@ -787,6 +811,30 @@ sinastd/Error.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/sinastd/Error.c.s
 .PHONY : sinastd/Error.c.s
 
+sinastd/Param.o: sinastd/Param.c.o
+.PHONY : sinastd/Param.o
+
+# target to build an object file
+sinastd/Param.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/sinastd/Param.c.o
+.PHONY : sinastd/Param.c.o
+
+sinastd/Param.i: sinastd/Param.c.i
+.PHONY : sinastd/Param.i
+
+# target to preprocess a source file
+sinastd/Param.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/sinastd/Param.c.i
+.PHONY : sinastd/Param.c.i
+
+sinastd/Param.s: sinastd/Param.c.s
+.PHONY : sinastd/Param.s
+
+# target to generate assembly for a file
+sinastd/Param.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/sinastd/Param.c.s
+.PHONY : sinastd/Param.c.s
+
 sinastd/Parser.o: sinastd/Parser.c.o
 .PHONY : sinastd/Parser.o
 
@@ -834,6 +882,30 @@ views/console.s: views/console.c.s
 views/console.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/views/console.c.s
 .PHONY : views/console.c.s
+
+views/test.o: views/test.c.o
+.PHONY : views/test.o
+
+# target to build an object file
+views/test.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/views/test.c.o
+.PHONY : views/test.c.o
+
+views/test.i: views/test.c.i
+.PHONY : views/test.i
+
+# target to preprocess a source file
+views/test.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/views/test.c.i
+.PHONY : views/test.c.i
+
+views/test.s: views/test.c.s
+.PHONY : views/test.s
+
+# target to generate assembly for a file
+views/test.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/views/test.c.s
+.PHONY : views/test.c.s
 
 # Help Target
 help:
@@ -899,6 +971,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... models/TestCase.o"
+	@echo "... models/TestCase.i"
+	@echo "... models/TestCase.s"
 	@echo "... models/User.o"
 	@echo "... models/User.i"
 	@echo "... models/User.s"
@@ -908,12 +983,18 @@ help:
 	@echo "... sinastd/Error.o"
 	@echo "... sinastd/Error.i"
 	@echo "... sinastd/Error.s"
+	@echo "... sinastd/Param.o"
+	@echo "... sinastd/Param.i"
+	@echo "... sinastd/Param.s"
 	@echo "... sinastd/Parser.o"
 	@echo "... sinastd/Parser.i"
 	@echo "... sinastd/Parser.s"
 	@echo "... views/console.o"
 	@echo "... views/console.i"
 	@echo "... views/console.s"
+	@echo "... views/test.o"
+	@echo "... views/test.i"
+	@echo "... views/test.s"
 .PHONY : help
 
 

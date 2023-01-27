@@ -38,6 +38,7 @@ CMakeFiles/FoodReservation.dir/views/console.c.o: \
  /home/sinasadeghi/Programming/Clang/Project/views/../controllers/../models/User.h \
  /home/sinasadeghi/Programming/Clang/Project/views/../controllers/../models/../sinastd/Date.h \
  /home/sinasadeghi/Programming/Clang/Project/views/../controllers/../models/../sinastd/Error.h \
+ /home/sinasadeghi/Programming/Clang/Project/views/../controllers/../sinastd/Param.h \
  /home/sinasadeghi/Programming/Clang/Project/views/../models/User.h \
  /usr/include/termios.h /usr/include/bits/termios.h \
  /usr/include/bits/termios-struct.h /usr/include/bits/termios-c_cc.h \

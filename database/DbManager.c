@@ -205,7 +205,7 @@ bool DbSelect(const char *table, const char *whereCols[], const char *whereValue
             {
                 isIN = true;
                 strcat(sql, " ");
-                strncpy(whereValue, whereValues[i] + 2, strlen(whereValues[i]) - 3);
+                strncpy(whereValue, whereValues[i] + 3, strlen(whereValues[i]) - 4);
             }
             // concatenating whereValues[i] by considering probable sql injection
             char *escapedValue = sqlite3_mprintf("%q", whereValue);
@@ -221,6 +221,7 @@ bool DbSelect(const char *table, const char *whereCols[], const char *whereValue
                 strcat(sql, " AND ");
             }
             i++;
+            free(whereValue);
         }
     }
     strcat(sql, ";");
@@ -236,5 +237,89 @@ bool DbSelect(const char *table, const char *whereCols[], const char *whereValue
     return res == SQLITE_OK;
 }
 
-// Update a row in the database according to the table name, where cols and values statements, and set cols and values statements
-// TODO
+// Update a row in the database according to the table name, set cols and values statements, and where cols and values statements
+// Using IN statement would look like : DbUpdate("table", {"col1", "col2"}, {"1", "2"}, {"col3", "col4"}, {"IN (1,2,3)", "IN (4,5,6)"});
+// Added support for prevention of SQL injection
+bool DbUpdate(const char *table, const char *setCols[], const char *setValues[], const char *whereCols[], const char *whereValues[])
+{
+    openDb();
+    if (isopen != 1)
+    {
+        return false;
+    }
+
+    // Creating sql statement
+    char sql[MAX_SQL];
+    memset(sql, '\0', MAX_SQL);
+    sprintf(sql, "UPDATE ");
+    strcat(sql, table);
+    strcat(sql, " SET ");
+    int i = 0;
+    while (setCols[i] != NULL)
+    {
+        // strcat(sql, "'");
+        strcat(sql, setCols[i]);
+        // strcat(sql, "'");
+        strcat(sql, " = '");
+        // concatenating setValues[i] by considering probable sql injection
+        char *escapedValue = sqlite3_mprintf("%q", setValues[i]);
+        strcat(sql, escapedValue);
+        sqlite3_free(escapedValue);
+        strcat(sql, "'");
+        if (setCols[i + 1] != NULL)
+        {
+            strcat(sql, ", ");
+        }
+        i++;
+    }
+    if (whereCols != NULL && whereValues != NULL)
+    {
+        strcat(sql, " WHERE ");
+        i = 0;
+        while (whereCols[i] != NULL)
+        {
+            // strcat(sql, "'");
+            strcat(sql, whereCols[i]);
+            // strcat(sql, "'");
+            bool isIN = false;
+            char *whereValue = (char *)malloc(strlen(whereValues[i]) + 1);
+            strcpy(whereValue, whereValues[i]);
+            if (strncmp(whereValue, "IN", 2) != 0)
+            {
+                strcat(sql, " = '");
+            }
+            else
+            {
+                isIN = true;
+                strcat(sql, " ");
+                strncpy(whereValue, whereValues[i] + 3, strlen(whereValues[i]) - 4);
+            }
+            // concatenating whereValues[i] by considering probable sql injection
+            char *escapedValue = sqlite3_mprintf("%q", whereValue);
+            strcat(sql, escapedValue);
+            sqlite3_free(escapedValue);
+            if (!isIN)
+            {
+                strcat(sql, "'");
+            }
+
+            if (whereCols[i + 1] != NULL)
+            {
+                strcat(sql, " AND ");
+            }
+            i++;
+            free(whereValue);
+        }
+    }
+    strcat(sql, ";");
+
+    // Executing sql statement
+    char *err;
+    int res = sqlite3_exec(db, sql, NULL, NULL, &err);
+    closeDb();
+    if (res != SQLITE_OK)
+    {
+        fprintf(stderr, "Error updating database: %s\nCommand:%s\n", err, sql);
+    }
+    return res == SQLITE_OK;
+}

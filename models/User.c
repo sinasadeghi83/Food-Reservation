@@ -183,6 +183,7 @@ Error *UserSave(User *this)
         error->testMsg = ERR_PERM;
         return error;
     }
+    UserFreeArray(users);
     char *type = UserTypeString(this);
     char *gender = UserGenderString(this);
     char *date = DateToString(this->birth_date);
@@ -202,6 +203,49 @@ Error *UserSave(User *this)
     error->isAny = !DbInsert(USER_TABLE, USER_COLS, values);
     error->msg = NULL;
     error->testMsg = NULL;
+    return error;
+}
+
+// Update the user in the database using DbManager
+Error *UserUpdate(User *this)
+{
+    // Creating Error
+    Error *error = ErrorCreate(false, NULL, NULL);
+    // Check if user exists
+    User **users = UserFind((const char *[]){"username", NULL}, (const char *[]){this->username, NULL});
+    if (users == NULL)
+    {
+        UserFreeArray(users);
+        error->isAny = true;
+        error->msg = "User doesn't exists!";
+        error->testMsg = ERR_PERM;
+        return error;
+    }
+    UserFreeArray(users);
+    // Creating values array
+    char *type = UserTypeString(this);
+    char *gender = UserGenderString(this);
+    char *date = DateToString(this->birth_date);
+    const char *values[] = {
+        this->username,
+        this->password,
+        type,
+        this->fname,
+        this->lname,
+        this->national_code,
+        gender,
+        date,
+        this->approved ? "1" : "0",
+        NULL};
+    // Creating where
+    const char *whereCols[] = {"username", NULL};
+    const char *whereValues[] = {this->username, NULL};
+    // Query the DB
+    error->isAny = !DbUpdate(USER_TABLE, USER_COLS, values, whereCols, whereValues);
+    error->msg = NULL;
+    error->testMsg = NULL;
+    // Free the strings
+    free(date);
     return error;
 }
 

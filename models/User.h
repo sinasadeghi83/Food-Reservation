@@ -47,5 +47,6 @@ char *UserGenderString(User *this);
 UserType UserStringToType(char *type);
 UserGender UserStringToGender(char *gender);
 Error *UserSave(User *this);
+Error *UserUpdate(User *this);
 User **UserFind(const char *whereCols[], const char *whereValues[]);
 #endif

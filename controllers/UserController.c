@@ -5,39 +5,6 @@
 #include "../models/User.h"
 #include "../sinastd/Error.h"
 
-// Error *UserActionLogin(char *username, char *password)
-// {
-//     Error *err = ErrorCreate(false, NULL);
-//     // Check if user already logged in
-//     if (UserIsLoggedIn())
-//     {
-//         err->isAny = true;
-//         err->msg = "You are already logged in!";
-//         return err;
-//     }
-//     // Find user
-//     User **users = UserFind((const char *[]){"username", "approved", NULL}, (const char *[]){username, "1", NULL});
-//     // return error if user not found
-//     if (users == NULL)
-//     {
-//         err->isAny = true;
-//         err->msg = "User not found!";
-//         return err;
-//     }
-//     User *user = users[0];
-//     UserFreeFromArray(users, 1);
-//     // Check if password is correct
-//     if (!UserVerifyPassword(user, password))
-//     {
-//         err->isAny = true;
-//         err->msg = "Incorrect password!";
-//         return err;
-//     }
-//     // Set session user
-//     SessionUser = user;
-//     return err;
-// }
-
 Error *UserActionLogin(Param **params)
 {
     Error *err = ErrorCreate(false, NULL, NULL);
@@ -139,34 +106,6 @@ Error *UserActionLogout(Param **params)
 }
 
 // This function registers a new user
-// Error *UserActionRegister(char *username, char *password, char *fname, char *lname, char *national_code, char *birth_date, UserGender gender, UserType type)
-// {
-//     // Create error
-//     Error *err = ErrorCreate(false, NULL);
-//     // Check if user is logged in
-//     if (UserIsLoggedIn())
-//     {
-//         if (SessionUser->type != USER_ADMIN)
-//         {
-//             err->isAny = true;
-//             err->msg = "You are already logged in!";
-//             return err;
-//         }
-//     }
-//     // Create user
-//     User *user = UserCreate(username, password, fname, lname, national_code, CreateDateFromString(birth_date), gender, type, SessionUser->type == USER_ADMIN);
-//     // Save user
-//     err = UserSave(user);
-//     // Free user
-//     UserFree(user);
-//     // Set error message if there is error with no message
-//     if (err->isAny)
-//     {
-//         err->msg = err->msg == NULL ? "Error while saving user!" : err->msg;
-//     }
-//     return err;
-// }
-
 Error *UserActionRegister(Param **params)
 {
     // Create error
@@ -243,6 +182,77 @@ Error *UserActionRegister(Param **params)
         err->msg = err->msg == NULL ? "Error while saving user!" : err->msg;
         err->testMsg = err->testMsg == NULL ? ERR_INVALID : err->testMsg;
     }
+    return err;
+}
+
+// This function changes a user's password
+Error *UserActionChangePass(Param **params)
+{
+    char *username, *oldPass, *newPass = NULL;
+    username = oldPass = newPass = NULL;
+    // Create error
+    Error *err = ErrorCreate(false, NULL, NULL);
+    // Get params
+    for (int i = 0; params[i] != NULL; i++)
+    {
+        if (strcmp(params[i]->name, "user") == 0)
+        {
+            username = params[i]->value;
+        }
+        else if (strcmp(params[i]->name, "old-pass") == 0)
+        {
+            oldPass = params[i]->value;
+        }
+        else if (strcmp(params[i]->name, "new-pass") == 0)
+        {
+            newPass = params[i]->value;
+        }
+    }
+    // Check if user is logged in
+    if (!UserIsLoggedIn())
+    {
+        // Return error
+        err->isAny = true;
+        err->msg = "You are not logged in!";
+        err->testMsg = ERR_404;
+        return err;
+    }
+
+    // Check if username is the same as session user
+    if (strcmp(username, SessionUser->username) != 0)
+    {
+        // Return error
+        err->isAny = true;
+        err->msg = "You are not logged in as this user!";
+        err->testMsg = ERR_404;
+        return err;
+    }
+
+    // Check if old password is correct
+    if (!UserVerifyPassword(SessionUser, oldPass))
+    {
+        // Return error
+        err->isAny = true;
+        err->msg = "Old password is incorrect!";
+        err->testMsg = ERR_PERM;
+        return err;
+    }
+
+    // Change password
+    UserSetPassword(SessionUser, newPass);
+
+    // Check if the password has been set
+    if (!UserVerifyPassword(SessionUser, newPass))
+    {
+        // Return error
+        err->isAny = true;
+        err->msg = "Error while changing password!";
+        err->testMsg = NULL;
+        return err;
+    }
+
+    // Update user
+    err = UserUpdate(SessionUser);
     return err;
 }
 

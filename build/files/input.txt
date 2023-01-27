@@ -1,2 +1,4 @@
-1001#login#user:admin|password:admin
+1001#login#user:admin|password:4321
+1003#change-pass#user:admin|old-pass:4321|new-pass:admin
 1002#logout#user:admin
+1001#login#user:admin|password:admin

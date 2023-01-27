@@ -4,3 +4,6 @@ CREATE TABLE "testcase" (
 	"valid_params"	VARCHAR(255) DEFAULT NULL,
 	PRIMARY KEY("id")
 );
+INSERT INTO "main"."testcase" ("id", "title", "valid_params") VALUES ('1001', 'login', 'user,password');
+INSERT INTO "main"."testcase" ("id", "title", "valid_params") VALUES ('1002', 'logout', 'user');
+INSERT INTO "main"."testcase" ("id", "title", "valid_params") VALUES ('1003', 'change-pass', 'user,old-pass,new-pass');

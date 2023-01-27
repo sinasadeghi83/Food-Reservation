@@ -39,8 +39,11 @@ void TestActionMain()
     for (int i = 0; i < testCount; i++)
     {
         TestActionRun(testCases[i]);
+        fflush(outStream);
         TestCaseFree(testCases[i]);
     }
+    fclose(inStream);
+    fclose(outStream);
 }
 
 // TestCase runner

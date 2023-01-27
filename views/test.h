@@ -22,6 +22,7 @@ static ActionLookup testActionLookup[] = {
     },
     {"logout", UserActionLogout},
     {"register", UserActionRegister},
+    {"change-pass", UserActionChangePass},
     {NULL, NULL}};
 
 void TestActionMain();

@@ -26,6 +26,7 @@ static ActionLookup testActionLookup[] = {
     {"approve", UserActionApprove},
     {"change-student-pass", UserActionChangeStdPass},
     {"remove-student", UserActionRemoveStd},
+    {"deactivate", UserActionDeactivate},
     {NULL, NULL}};
 
 void TestActionMain();

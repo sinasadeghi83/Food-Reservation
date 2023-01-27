@@ -457,6 +457,78 @@ Error *UserActionChangeStdPass(Param **params)
     return err;
 }
 
+// This function deactivate(Disapprove) some student users by only admin
+Error *UserActionDeactivate(Param **params)
+{
+    // Create error
+    Error *err = ErrorCreate(false, NULL, NULL);
+    char *usernames[USER_MAX_USERS];
+    int userCount = 0;
+    // Get params
+    for (int i = 0; params[i] != NULL; i++)
+    {
+        if (strcmp(params[i]->name, "user") == 0)
+        {
+            usernames[userCount] = params[i]->value;
+            userCount++;
+        }
+    }
+    // Check if user is logged in and is admin
+    if (!UserIsLoggedIn() || SessionUser->type != USER_ADMIN)
+    {
+        // Return error
+        err->isAny = true;
+        err->msg = "You are not logged in as admin!";
+        err->testMsg = ERR_PERM;
+        return err;
+    }
+    // Disapprove users
+    for (int i = 0; i < userCount; i++)
+    {
+        // Get users
+        User **users = UserFind((const char *[]){"username", NULL}, (const char *[]){usernames[i], NULL});
+        // Check if user exists
+        if (users == NULL)
+        {
+            // Return error
+            err->isAny = true;
+            err->msg = "User does not exist!";
+            err->testMsg = ERR_404;
+            continue;
+        }
+        // Get user
+        User *user = users[0];
+        // Free users
+        UserFreeFromArray(users, 1);
+        // Check if user is admin
+        if (user->type == USER_ADMIN)
+        {
+            // Return error
+            err->isAny = true;
+            err->msg = "You can not disapprove an admin!";
+            err->testMsg = ERR_404;
+            continue;
+        }
+        // Disapprove user
+        user->approved = false;
+        // Update user
+        Error *errUser = UserUpdate(user);
+        // Free user
+        UserFree(user);
+        // Check if there is error
+        if (errUser->isAny)
+        {
+            // Return error
+            err->isAny = true;
+            err->msg = err->msg == NULL ? "Error while disapproving user!" : err->msg;
+            err->testMsg = err->testMsg == NULL ? ERR_INVALID : err->testMsg;
+            return err;
+        }
+        ErrorFree(errUser);
+    }
+    return err;
+}
+
 // This function returns the current session user
 User *UserGetSessionUser()
 {

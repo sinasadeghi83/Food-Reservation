@@ -12,8 +12,9 @@ static User *SessionUser = NULL;
 Error *UserActionLogin(Param **params);
 Error *UserActionLogout(Param **params);
 Error *UserActionRegister(Param **params);
-User *UserGetSessionUser();
 Error *UserActionChangePass(Param **params);
+Error *UserActionApprove(Param **params);
+User *UserGetSessionUser();
 
 static bool UserIsLoggedIn();
 

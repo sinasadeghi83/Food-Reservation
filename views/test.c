@@ -54,8 +54,10 @@ void TestActionRun(TestCase *testCase)
     if (err->isAny)
     {
         fprintf(outStream, "%d#%s\n", testCase->id, err->msg ? err->msg : "Unknown error");
+        ErrorFree(err);
         return;
     }
+    ErrorFree(err);
     ActionLookup *action = testActionLookup;
     while (action->name != NULL)
     {
@@ -70,6 +72,7 @@ void TestActionRun(TestCase *testCase)
             {
                 fprintf(outStream, "%d#%s\n", testCase->id, err->testMsg ? err->testMsg : "success");
             }
+            ErrorFree(err);
             break;
         }
         action++;

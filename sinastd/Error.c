@@ -37,6 +37,13 @@ void ErrorInitialise(Error *this, bool isAny, char *msg, char *testMsg)
 // Free the error data
 void ErrorFree(Error *this)
 {
-    free(this->msg);
+    if (this->testMsg == NULL)
+    {
+        return;
+    }
+    // if (this->msg != NULL)
+    // {
+    //     // free(this->msg);
+    // }
     free(this);
 }

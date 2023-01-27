@@ -8,3 +8,4 @@ INSERT INTO "main"."testcase" ("id", "title", "valid_params") VALUES ('1001', 'l
 INSERT INTO "main"."testcase" ("id", "title", "valid_params") VALUES ('1002', 'logout', 'user');
 INSERT INTO "main"."testcase" ("id", "title", "valid_params") VALUES ('1003', 'change-pass', 'user,old-pass,new-pass');
 INSERT INTO "main"."testcase" ("id", "title", "valid_params") VALUES ('1004', 'approve', 'user');
+INSERT INTO "main"."testcase" ("id", "title", "valid_params") VALUES ('1005', 'change-student-pass', 'user,new-pass');

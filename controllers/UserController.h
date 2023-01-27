@@ -14,6 +14,7 @@ Error *UserActionLogout(Param **params);
 Error *UserActionRegister(Param **params);
 Error *UserActionChangePass(Param **params);
 Error *UserActionApprove(Param **params);
+Error *UserActionChangeStdPass(Param **params);
 User *UserGetSessionUser();
 
 static bool UserIsLoggedIn();

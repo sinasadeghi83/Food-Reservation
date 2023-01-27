@@ -319,6 +319,74 @@ Error *UserActionApprove(Param **params)
     return err;
 }
 
+// This function change a student user password by only admin
+Error *UserActionChangeStdPass(Param **params)
+{
+    // Create error
+    Error *err = ErrorCreate(false, NULL, NULL);
+    char *username, *newPass = NULL;
+    username = newPass = NULL;
+    // Get params
+    for (int i = 0; params[i] != NULL; i++)
+    {
+        if (strcmp(params[i]->name, "user") == 0)
+        {
+            username = params[i]->value;
+        }
+        else if (strcmp(params[i]->name, "new-pass") == 0)
+        {
+            newPass = params[i]->value;
+        }
+    }
+    // Check if user is logged in and is admin
+    if (!UserIsLoggedIn() || SessionUser->type != USER_ADMIN)
+    {
+        // Return error
+        err->isAny = true;
+        err->msg = "You are not logged in as admin!";
+        err->testMsg = ERR_PERM;
+        return err;
+    }
+    // Get users
+    User **users = UserFind((const char *[]){"username", NULL}, (const char *[]){username, NULL});
+    // Check if user exists
+    if (users == NULL)
+    {
+        // Show error
+        err->isAny = true;
+        err->msg = "User does not exist!";
+        err->testMsg = ERR_404;
+        return err;
+    }
+    // Get user
+    User *user = users[0];
+    // Free users
+    UserFreeFromArray(users, 1);
+    // Check if user is student
+    if (user->type != USER_STUDENT)
+    {
+        // Show error
+        err->isAny = true;
+        err->msg = "User is not a student!";
+        err->testMsg = ERR_PERM;
+        return err;
+    }
+    // Change password
+    UserSetPassword(user, newPass);
+    // Check if the password has been set
+    if (!UserVerifyPassword(user, newPass))
+    {
+        // Return error
+        err->isAny = true;
+        err->msg = "Error while changing password!";
+        err->testMsg = NULL;
+        return err;
+    }
+    // Update user
+    err = UserUpdate(user);
+    return err;
+}
+
 // This function returns the current session user
 User *UserGetSessionUser()
 {

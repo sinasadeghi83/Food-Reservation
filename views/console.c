@@ -165,7 +165,7 @@ void ConsoleActionRegister()
     }
     else
     {
-        printf("Register process done succecfully!");
+        printf("\nRegister process done succecfully!\n\n");
     }
 }
 
@@ -175,9 +175,10 @@ bool ConsoleActionLoggedInMenu()
     printf("Menu:\n");
     printf("1. Logout\n");
     printf("2. Exit\n");
-    if (SessionUser->type == USER_ADMIN)
+    User *SessionUser = UserGetSessionUser();
+    if (SessionUser != NULL && SessionUser->type == USER_ADMIN)
     {
-        printf("3. Register another user");
+        printf("3. Register another user\n");
     }
     printf("Your choice: ");
 
@@ -197,7 +198,7 @@ bool ConsoleActionLoggedInMenu()
             printf("Logout successful\n");
         }
         free(err);
-        return err->isAny;
+        return UserGetSessionUser() != NULL;
         break;
     case 2:
         // Exit from the program

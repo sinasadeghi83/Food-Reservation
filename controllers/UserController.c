@@ -16,7 +16,7 @@ Error *UserActionLogin(char *username, char *password)
         return err;
     }
     // Find user
-    User **users = UserFind((const char *[]){"username", NULL}, (const char *[]){username, NULL});
+    User **users = UserFind((const char *[]){"username", "approved", NULL}, (const char *[]){username, "1", NULL});
     // return error if user not found
     if (users == NULL)
     {
@@ -71,7 +71,7 @@ Error *UserActionRegister(char *username, char *password, char *fname, char *lna
         }
     }
     // Create user
-    User *user = UserCreate(username, password, fname, lname, national_code, CreateDateFromString(birth_date), gender, type);
+    User *user = UserCreate(username, password, fname, lname, national_code, CreateDateFromString(birth_date), gender, type, SessionUser->type == USER_ADMIN);
     // Save user
     err = UserSave(user);
     // Free user
@@ -82,6 +82,12 @@ Error *UserActionRegister(char *username, char *password, char *fname, char *lna
         err->msg = err->msg == NULL ? "Error while saving user!" : err->msg;
     }
     return err;
+}
+
+// This function returns the current session user
+User *UserGetSessionUser()
+{
+    return SessionUser;
 }
 
 // Check if user is logged in

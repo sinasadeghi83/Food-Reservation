@@ -31,11 +31,12 @@ struct User
     Date *birth_date;
     UserGender gender;
     UserType type;
+    bool approved;
 };
 
 // User initialiser
-void UserInitialise(User *this, char *username, char *password, char *fname, char *lname, char *national_code, Date *birth_date, UserGender gender, UserType type);
-User *UserCreate(char *username, char *password, char *fname, char *lname, char *national_code, Date *birth_date, UserGender gender, UserType type);
+void UserInitialise(User *this, char *username, char *password, char *fname, char *lname, char *national_code, Date *birth_date, UserGender gender, UserType type, bool approved);
+User *UserCreate(char *username, char *password, char *fname, char *lname, char *national_code, Date *birth_date, UserGender gender, UserType type, bool approved);
 void UserFree(User *this);
 void UserFreeArray(User **users);
 void UserFreeFromArray(User **users, int n);

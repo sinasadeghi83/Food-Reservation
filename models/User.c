@@ -13,7 +13,7 @@
 #define USER_TABLE "user"
 #define MAX_USER_FETCH 100
 
-const char *USER_COLS[9] = {
+const char *USER_COLS[10] = {
     "username",
     "password",
     "type",
@@ -22,19 +22,20 @@ const char *USER_COLS[9] = {
     "national_code",
     "gender",
     "birth_date",
+    "approved",
     NULL};
 
 static int selectIndex = 0;
 
-User *UserCreate(char *username, char *password, char *fname, char *lname, char *national_code, Date *birth_date, UserGender gender, UserType type)
+User *UserCreate(char *username, char *password, char *fname, char *lname, char *national_code, Date *birth_date, UserGender gender, UserType type, bool approved)
 {
     User *this = malloc(sizeof(User));
-    UserInitialise(this, username, password, fname, lname, national_code, birth_date, gender, type);
+    UserInitialise(this, username, password, fname, lname, national_code, birth_date, gender, type, approved);
     return this;
 }
 
 // User initialiser
-void UserInitialise(User *this, char *username, char *password, char *fname, char *lname, char *national_code, Date *birth_date, UserGender gender, UserType type)
+void UserInitialise(User *this, char *username, char *password, char *fname, char *lname, char *national_code, Date *birth_date, UserGender gender, UserType type, bool approved)
 {
     // Initialise User data according to given parameters
     this->username = malloc(strlen(username) + 1);
@@ -50,6 +51,7 @@ void UserInitialise(User *this, char *username, char *password, char *fname, cha
     memcpy(this->birth_date, birth_date, sizeof(Date));
     this->gender = gender;
     this->type = type;
+    this->approved = approved;
 }
 
 // Free the user data
@@ -192,6 +194,7 @@ Error *UserSave(User *this)
         this->national_code,
         gender,
         date,
+        this->approved ? "1" : "0",
         NULL};
     // Free the strings
     free(date);
@@ -207,7 +210,7 @@ int UserSelectCallback(void *data, int argc, char **argv, char **azColName)
     User **users = (User **)(data);
     UserGender gender = UserStringToGender(argv[6]);
     UserType type = UserStringToType(argv[2]);
-    users[selectIndex++] = UserCreate(argv[0], argv[1], argv[3], argv[4], argv[5], CreateDateFromString(argv[7]), gender, type);
+    users[selectIndex++] = UserCreate(argv[0], argv[1], argv[3], argv[4], argv[5], CreateDateFromString(argv[7]), gender, type, argv[8][0] == '1');
     users[selectIndex] = NULL;
     return 0;
 }

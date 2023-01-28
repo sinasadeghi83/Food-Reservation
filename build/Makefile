@@ -523,6 +523,30 @@ FoodReservation/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/build
 .PHONY : FoodReservation/fast
 
+controllers/SelfController.o: controllers/SelfController.c.o
+.PHONY : controllers/SelfController.o
+
+# target to build an object file
+controllers/SelfController.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/controllers/SelfController.c.o
+.PHONY : controllers/SelfController.c.o
+
+controllers/SelfController.i: controllers/SelfController.c.i
+.PHONY : controllers/SelfController.i
+
+# target to preprocess a source file
+controllers/SelfController.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/controllers/SelfController.c.i
+.PHONY : controllers/SelfController.c.i
+
+controllers/SelfController.s: controllers/SelfController.c.s
+.PHONY : controllers/SelfController.s
+
+# target to generate assembly for a file
+controllers/SelfController.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/controllers/SelfController.c.s
+.PHONY : controllers/SelfController.c.s
+
 controllers/UserController.o: controllers/UserController.c.o
 .PHONY : controllers/UserController.o
 
@@ -715,6 +739,30 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/main.c.s
 .PHONY : main.c.s
 
+models/Self.o: models/Self.c.o
+.PHONY : models/Self.o
+
+# target to build an object file
+models/Self.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/models/Self.c.o
+.PHONY : models/Self.c.o
+
+models/Self.i: models/Self.c.i
+.PHONY : models/Self.i
+
+# target to preprocess a source file
+models/Self.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/models/Self.c.i
+.PHONY : models/Self.c.i
+
+models/Self.s: models/Self.c.s
+.PHONY : models/Self.s
+
+# target to generate assembly for a file
+models/Self.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/models/Self.c.s
+.PHONY : models/Self.c.s
+
 models/TestCase.o: models/TestCase.c.o
 .PHONY : models/TestCase.o
 
@@ -859,6 +907,30 @@ sinastd/Parser.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/sinastd/Parser.c.s
 .PHONY : sinastd/Parser.c.s
 
+sinastd/TimePeriod.o: sinastd/TimePeriod.c.o
+.PHONY : sinastd/TimePeriod.o
+
+# target to build an object file
+sinastd/TimePeriod.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/sinastd/TimePeriod.c.o
+.PHONY : sinastd/TimePeriod.c.o
+
+sinastd/TimePeriod.i: sinastd/TimePeriod.c.i
+.PHONY : sinastd/TimePeriod.i
+
+# target to preprocess a source file
+sinastd/TimePeriod.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/sinastd/TimePeriod.c.i
+.PHONY : sinastd/TimePeriod.c.i
+
+sinastd/TimePeriod.s: sinastd/TimePeriod.c.s
+.PHONY : sinastd/TimePeriod.s
+
+# target to generate assembly for a file
+sinastd/TimePeriod.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/sinastd/TimePeriod.c.s
+.PHONY : sinastd/TimePeriod.c.s
+
 views/console.o: views/console.c.o
 .PHONY : views/console.o
 
@@ -947,6 +1019,9 @@ help:
 	@echo "... NightlyTest"
 	@echo "... NightlyUpdate"
 	@echo "... FoodReservation"
+	@echo "... controllers/SelfController.o"
+	@echo "... controllers/SelfController.i"
+	@echo "... controllers/SelfController.s"
 	@echo "... controllers/UserController.o"
 	@echo "... controllers/UserController.i"
 	@echo "... controllers/UserController.s"
@@ -971,6 +1046,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... models/Self.o"
+	@echo "... models/Self.i"
+	@echo "... models/Self.s"
 	@echo "... models/TestCase.o"
 	@echo "... models/TestCase.i"
 	@echo "... models/TestCase.s"
@@ -989,6 +1067,9 @@ help:
 	@echo "... sinastd/Parser.o"
 	@echo "... sinastd/Parser.i"
 	@echo "... sinastd/Parser.s"
+	@echo "... sinastd/TimePeriod.o"
+	@echo "... sinastd/TimePeriod.i"
+	@echo "... sinastd/TimePeriod.s"
 	@echo "... views/console.o"
 	@echo "... views/console.i"
 	@echo "... views/console.s"

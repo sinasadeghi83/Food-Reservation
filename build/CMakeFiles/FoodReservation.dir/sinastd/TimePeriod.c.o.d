@@ -1,19 +1,8 @@
-CMakeFiles/FoodReservation.dir/views/test.c.o: \
- /home/sinasadeghi/Programming/Clang/Project/views/test.c \
+CMakeFiles/FoodReservation.dir/sinastd/TimePeriod.c.o: \
+ /home/sinasadeghi/Programming/Clang/Project/sinastd/TimePeriod.c \
  /usr/include/stdc-predef.h \
- /home/sinasadeghi/Programming/Clang/Project/views/test.h \
- /home/sinasadeghi/Programming/Clang/Project/views/../models/TestCase.h \
- /home/sinasadeghi/Programming/Clang/Project/views/../models/../sinastd/Param.h \
+ /home/sinasadeghi/Programming/Clang/Project/sinastd/TimePeriod.h \
  /usr/lib/gcc/x86_64-redhat-linux/12/include/stdbool.h \
- /home/sinasadeghi/Programming/Clang/Project/views/../models/../sinastd/Error.h \
- /home/sinasadeghi/Programming/Clang/Project/views/../sinastd/Param.h \
- /home/sinasadeghi/Programming/Clang/Project/views/../sinastd/Error.h \
- /home/sinasadeghi/Programming/Clang/Project/views/../controllers/UserController.h \
- /home/sinasadeghi/Programming/Clang/Project/views/../controllers/../sinastd/Error.h \
- /home/sinasadeghi/Programming/Clang/Project/views/../controllers/../models/User.h \
- /home/sinasadeghi/Programming/Clang/Project/views/../controllers/../models/../sinastd/Date.h \
- /home/sinasadeghi/Programming/Clang/Project/views/../controllers/../models/../sinastd/Error.h \
- /home/sinasadeghi/Programming/Clang/Project/views/../controllers/../sinastd/Param.h \
  /usr/include/stdlib.h /usr/include/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
  /usr/include/bits/wordsize.h /usr/include/bits/timesize.h \
@@ -37,13 +26,9 @@ CMakeFiles/FoodReservation.dir/views/test.c.o: \
  /usr/include/bits/pthreadtypes-arch.h \
  /usr/include/bits/atomic_wide_counter.h /usr/include/bits/struct_mutex.h \
  /usr/include/bits/struct_rwlock.h /usr/include/alloca.h \
- /usr/include/bits/stdlib-float.h \
- /home/sinasadeghi/Programming/Clang/Project/views/../controllers/SelfController.h \
- /usr/include/stdio.h \
+ /usr/include/bits/stdlib-float.h /usr/include/stdio.h \
  /usr/lib/gcc/x86_64-redhat-linux/12/include/stdarg.h \
  /usr/include/bits/types/__fpos_t.h /usr/include/bits/types/__mbstate_t.h \
  /usr/include/bits/types/__fpos64_t.h /usr/include/bits/types/__FILE.h \
  /usr/include/bits/types/FILE.h /usr/include/bits/types/struct_FILE.h \
- /usr/include/bits/stdio_lim.h /usr/include/string.h \
- /usr/include/bits/types/locale_t.h /usr/include/bits/types/__locale_t.h \
- /usr/include/strings.h
+ /usr/include/bits/stdio_lim.h

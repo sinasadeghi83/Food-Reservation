@@ -1,1 +1,2 @@
-1008#register#name:Testsina|family:Testi|user-id:140133364|password:asd123|national-id-code:0013334455|birthdate:1383-12-30|gender:male|type:admin
+1001#login#user:admin|password:admin
+1009#define-self#id:123|name:self-markazi-pesaran|location:main-campus|capacity:200|type:boyish|meal:both|lunch-time-limit:1130-1400|dinner-time-limit:1730-2000

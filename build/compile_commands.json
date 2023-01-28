@@ -36,6 +36,11 @@
 },
 {
   "directory": "/home/sinasadeghi/Programming/Clang/Project/build",
+  "command": "/usr/bin/gcc    -lsqlite3 -lm -g -o CMakeFiles/FoodReservation.dir/sinastd/TimePeriod.c.o -c /home/sinasadeghi/Programming/Clang/Project/sinastd/TimePeriod.c",
+  "file": "/home/sinasadeghi/Programming/Clang/Project/sinastd/TimePeriod.c"
+},
+{
+  "directory": "/home/sinasadeghi/Programming/Clang/Project/build",
   "command": "/usr/bin/gcc    -lsqlite3 -lm -g -o CMakeFiles/FoodReservation.dir/models/User.c.o -c /home/sinasadeghi/Programming/Clang/Project/models/User.c",
   "file": "/home/sinasadeghi/Programming/Clang/Project/models/User.c"
 },
@@ -43,6 +48,11 @@
   "directory": "/home/sinasadeghi/Programming/Clang/Project/build",
   "command": "/usr/bin/gcc    -lsqlite3 -lm -g -o CMakeFiles/FoodReservation.dir/models/TestCase.c.o -c /home/sinasadeghi/Programming/Clang/Project/models/TestCase.c",
   "file": "/home/sinasadeghi/Programming/Clang/Project/models/TestCase.c"
+},
+{
+  "directory": "/home/sinasadeghi/Programming/Clang/Project/build",
+  "command": "/usr/bin/gcc    -lsqlite3 -lm -g -o CMakeFiles/FoodReservation.dir/models/Self.c.o -c /home/sinasadeghi/Programming/Clang/Project/models/Self.c",
+  "file": "/home/sinasadeghi/Programming/Clang/Project/models/Self.c"
 },
 {
   "directory": "/home/sinasadeghi/Programming/Clang/Project/build",
@@ -58,6 +68,11 @@
   "directory": "/home/sinasadeghi/Programming/Clang/Project/build",
   "command": "/usr/bin/gcc    -lsqlite3 -lm -g -o CMakeFiles/FoodReservation.dir/controllers/UserController.c.o -c /home/sinasadeghi/Programming/Clang/Project/controllers/UserController.c",
   "file": "/home/sinasadeghi/Programming/Clang/Project/controllers/UserController.c"
+},
+{
+  "directory": "/home/sinasadeghi/Programming/Clang/Project/build",
+  "command": "/usr/bin/gcc    -lsqlite3 -lm -g -o CMakeFiles/FoodReservation.dir/controllers/SelfController.c.o -c /home/sinasadeghi/Programming/Clang/Project/controllers/SelfController.c",
+  "file": "/home/sinasadeghi/Programming/Clang/Project/controllers/SelfController.c"
 },
 {
   "directory": "/home/sinasadeghi/Programming/Clang/Project/build",

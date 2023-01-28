@@ -47,4 +47,5 @@ CMakeFiles/FoodReservation.dir/main.c.o: \
  /home/sinasadeghi/Programming/Clang/Project/views/../controllers/UserController.h \
  /home/sinasadeghi/Programming/Clang/Project/views/../controllers/../sinastd/Error.h \
  /home/sinasadeghi/Programming/Clang/Project/views/../controllers/../models/User.h \
- /home/sinasadeghi/Programming/Clang/Project/views/../controllers/../sinastd/Param.h
+ /home/sinasadeghi/Programming/Clang/Project/views/../controllers/../sinastd/Param.h \
+ /home/sinasadeghi/Programming/Clang/Project/views/../controllers/SelfController.h

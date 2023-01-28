@@ -6,6 +6,7 @@
 #include "../sinastd/Param.h"
 #include "../sinastd/Error.h"
 #include "../controllers/UserController.h"
+#include "../controllers/SelfController.h"
 
 typedef struct ActionLookup ActionLookup;
 
@@ -27,6 +28,7 @@ static ActionLookup testActionLookup[] = {
     {"change-student-pass", UserActionChangeStdPass},
     {"remove-student", UserActionRemoveStd},
     {"deactivate", UserActionDeactivate},
+    {"define-self", SelfActionAdd},
     {NULL, NULL}};
 
 void TestActionMain();

@@ -13,11 +13,14 @@ set(SOURCES main.c
             sinastd/Parser.c
             sinastd/Error.c
             sinastd/Param.c
+            sinastd/TimePeriod.c
             models/User.c
             models/TestCase.c
+            models/Self.c
             views/console.c
             views/test.c
             controllers/UserController.c
+            controllers/SelfController.c
             libbcrypt/bcrypt.c
             libbcrypt/crypt_blowfish/crypt_blowfish.c
             libbcrypt/crypt_blowfish/crypt_gensalt.c

@@ -400,11 +400,11 @@ User **UserFind(const char *whereCols[], const char *whereValues[])
 {
     User **users = calloc(MAX_USER_FETCH, sizeof(User *)); // database result
     users[0] = NULL;
-    int i = 0;
     bool status = DbSelect(USER_TABLE, whereCols, whereValues, UserSelectCallback, (void *)users);
     selectIndex = 0;
     if (!status || users[0] == NULL)
     {
+        free(users);
         return NULL;
     }
     else

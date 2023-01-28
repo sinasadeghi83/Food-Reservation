@@ -17,10 +17,12 @@ set(SOURCES main.c
             models/User.c
             models/TestCase.c
             models/Self.c
+            models/Food.c
             views/console.c
             views/test.c
             controllers/UserController.c
             controllers/SelfController.c
+            controllers/FoodController.c
             libbcrypt/bcrypt.c
             libbcrypt/crypt_blowfish/crypt_blowfish.c
             libbcrypt/crypt_blowfish/crypt_gensalt.c

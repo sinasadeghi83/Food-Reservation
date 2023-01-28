@@ -13,3 +13,4 @@ INSERT INTO "main"."testcase" ("id", "title", "valid_params") VALUES ('1006', 'r
 INSERT INTO "main"."testcase" ("id", "title", "valid_params") VALUES ('1007', 'deactivate', 'user');
 INSERT INTO "main"."testcase" ("id", "title", "valid_params") VALUES ('1008', 'register', 'name,family,user-id,password,national-id-code,birthdate,gender,type');
 INSERT INTO "main"."testcase" ("id", "title", "valid_params") VALUES ('1009', 'define-self', 'id,name,location,campus,capacity,type,meal,lunch-time-limit,dinner-time-limit');
+INSERT INTO "main"."testcase" ("id", "title", "valid_params") VALUES ('1010', 'define-food', 'id,name,type,price');

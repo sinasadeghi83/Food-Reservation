@@ -523,6 +523,30 @@ FoodReservation/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/build
 .PHONY : FoodReservation/fast
 
+controllers/FoodController.o: controllers/FoodController.c.o
+.PHONY : controllers/FoodController.o
+
+# target to build an object file
+controllers/FoodController.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/controllers/FoodController.c.o
+.PHONY : controllers/FoodController.c.o
+
+controllers/FoodController.i: controllers/FoodController.c.i
+.PHONY : controllers/FoodController.i
+
+# target to preprocess a source file
+controllers/FoodController.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/controllers/FoodController.c.i
+.PHONY : controllers/FoodController.c.i
+
+controllers/FoodController.s: controllers/FoodController.c.s
+.PHONY : controllers/FoodController.s
+
+# target to generate assembly for a file
+controllers/FoodController.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/controllers/FoodController.c.s
+.PHONY : controllers/FoodController.c.s
+
 controllers/SelfController.o: controllers/SelfController.c.o
 .PHONY : controllers/SelfController.o
 
@@ -738,6 +762,30 @@ main.s: main.c.s
 main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/main.c.s
 .PHONY : main.c.s
+
+models/Food.o: models/Food.c.o
+.PHONY : models/Food.o
+
+# target to build an object file
+models/Food.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/models/Food.c.o
+.PHONY : models/Food.c.o
+
+models/Food.i: models/Food.c.i
+.PHONY : models/Food.i
+
+# target to preprocess a source file
+models/Food.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/models/Food.c.i
+.PHONY : models/Food.c.i
+
+models/Food.s: models/Food.c.s
+.PHONY : models/Food.s
+
+# target to generate assembly for a file
+models/Food.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FoodReservation.dir/build.make CMakeFiles/FoodReservation.dir/models/Food.c.s
+.PHONY : models/Food.c.s
 
 models/Self.o: models/Self.c.o
 .PHONY : models/Self.o
@@ -1019,6 +1067,9 @@ help:
 	@echo "... NightlyTest"
 	@echo "... NightlyUpdate"
 	@echo "... FoodReservation"
+	@echo "... controllers/FoodController.o"
+	@echo "... controllers/FoodController.i"
+	@echo "... controllers/FoodController.s"
 	@echo "... controllers/SelfController.o"
 	@echo "... controllers/SelfController.i"
 	@echo "... controllers/SelfController.s"
@@ -1046,6 +1097,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... models/Food.o"
+	@echo "... models/Food.i"
+	@echo "... models/Food.s"
 	@echo "... models/Self.o"
 	@echo "... models/Self.i"
 	@echo "... models/Self.s"

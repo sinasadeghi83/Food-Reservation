@@ -39,6 +39,7 @@ CMakeFiles/FoodReservation.dir/views/test.c.o: \
  /usr/include/bits/struct_rwlock.h /usr/include/alloca.h \
  /usr/include/bits/stdlib-float.h \
  /home/sinasadeghi/Programming/Clang/Project/views/../controllers/SelfController.h \
+ /home/sinasadeghi/Programming/Clang/Project/views/../controllers/FoodController.h \
  /usr/include/stdio.h \
  /usr/lib/gcc/x86_64-redhat-linux/12/include/stdarg.h \
  /usr/include/bits/types/__fpos_t.h /usr/include/bits/types/__mbstate_t.h \

@@ -160,6 +160,7 @@ bool DbInsert(const char *table, const char *cols[], const char *values[])
     // Executing sql statement
     char *err;
     int res = sqlite3_exec(db, sql, NULL, NULL, &err);
+    sqlite3_db_cacheflush(db);
     closeDb();
     if (res != SQLITE_OK)
     {
@@ -229,6 +230,7 @@ bool DbSelect(const char *table, const char *whereCols[], const char *whereValue
     // Executing sql statement
     char *err;
     int res = sqlite3_exec(db, sql, callback, data, &err);
+    sqlite3_db_cacheflush(db);
     closeDb();
     if (res != SQLITE_OK)
     {
@@ -316,6 +318,7 @@ bool DbUpdate(const char *table, const char *setCols[], const char *setValues[],
     // Executing sql statement
     char *err;
     int res = sqlite3_exec(db, sql, NULL, NULL, &err);
+    sqlite3_db_cacheflush(db);
     closeDb();
     if (res != SQLITE_OK)
     {
@@ -384,6 +387,7 @@ bool DbDelete(const char *table, const char *whereCols[], const char *whereValue
     // Executing sql statement
     char *err;
     int res = sqlite3_exec(db, sql, NULL, NULL, &err);
+    sqlite3_db_cacheflush(db);
     closeDb();
     if (res != SQLITE_OK)
     {

@@ -1,12 +1,12 @@
 CMakeFiles/FoodReservation.dir/database/Migration.c.o: \
- /home/sinasadeghi/Programming/Clang/Project/database/Migration.c \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/database/Migration.c \
  /usr/include/stdc-predef.h \
- /home/sinasadeghi/Programming/Clang/Project/database/DbManager.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/database/DbManager.h \
  /usr/include/sqlite3.h \
  /usr/lib/gcc/x86_64-redhat-linux/12/include/stdarg.h \
  /usr/lib/gcc/x86_64-redhat-linux/12/include/stdbool.h \
- /home/sinasadeghi/Programming/Clang/Project/database/Migration.h \
- /home/sinasadeghi/Programming/Clang/Project/database/../sinastd/Date.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/database/Migration.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/database/../sinastd/Date.h \
  /usr/include/stdlib.h /usr/include/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
  /usr/include/bits/wordsize.h /usr/include/bits/timesize.h \
@@ -41,4 +41,4 @@ CMakeFiles/FoodReservation.dir/database/Migration.c.o: \
  /usr/include/bits/pthread_stack_min.h /usr/include/bits/dirent_ext.h \
  /usr/include/string.h /usr/include/bits/types/locale_t.h \
  /usr/include/bits/types/__locale_t.h /usr/include/strings.h \
- /home/sinasadeghi/Programming/Clang/Project/database/../sinastd/Parser.h
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/database/../sinastd/Parser.h

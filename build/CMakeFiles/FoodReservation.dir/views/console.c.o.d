@@ -1,7 +1,7 @@
 CMakeFiles/FoodReservation.dir/views/console.c.o: \
- /home/sinasadeghi/Programming/Clang/Project/views/console.c \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/views/console.c \
  /usr/include/stdc-predef.h \
- /home/sinasadeghi/Programming/Clang/Project/views/console.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/views/console.h \
  /usr/lib/gcc/x86_64-redhat-linux/12/include/stdbool.h \
  /usr/include/stdio.h /usr/include/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -33,13 +33,13 @@ CMakeFiles/FoodReservation.dir/views/console.c.o: \
  /usr/include/bits/atomic_wide_counter.h /usr/include/bits/struct_mutex.h \
  /usr/include/bits/struct_rwlock.h /usr/include/alloca.h \
  /usr/include/bits/stdlib-float.h \
- /home/sinasadeghi/Programming/Clang/Project/views/../controllers/UserController.h \
- /home/sinasadeghi/Programming/Clang/Project/views/../controllers/../sinastd/Error.h \
- /home/sinasadeghi/Programming/Clang/Project/views/../controllers/../models/User.h \
- /home/sinasadeghi/Programming/Clang/Project/views/../controllers/../models/../sinastd/Date.h \
- /home/sinasadeghi/Programming/Clang/Project/views/../controllers/../models/../sinastd/Error.h \
- /home/sinasadeghi/Programming/Clang/Project/views/../controllers/../sinastd/Param.h \
- /home/sinasadeghi/Programming/Clang/Project/views/../models/User.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/views/../controllers/UserController.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/views/../controllers/../sinastd/Error.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/views/../controllers/../models/User.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/views/../controllers/../models/../sinastd/Date.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/views/../controllers/../models/../sinastd/Error.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/views/../controllers/../sinastd/Param.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/views/../models/User.h \
  /usr/include/termios.h /usr/include/bits/termios.h \
  /usr/include/bits/termios-struct.h /usr/include/bits/termios-c_cc.h \
  /usr/include/bits/termios-c_iflag.h /usr/include/bits/termios-c_oflag.h \

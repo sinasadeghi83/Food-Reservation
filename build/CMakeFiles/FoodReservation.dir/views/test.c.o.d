@@ -1,19 +1,19 @@
 CMakeFiles/FoodReservation.dir/views/test.c.o: \
- /home/sinasadeghi/Programming/Clang/Project/views/test.c \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/views/test.c \
  /usr/include/stdc-predef.h \
- /home/sinasadeghi/Programming/Clang/Project/views/test.h \
- /home/sinasadeghi/Programming/Clang/Project/views/../models/TestCase.h \
- /home/sinasadeghi/Programming/Clang/Project/views/../models/../sinastd/Param.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/views/test.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/views/../models/TestCase.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/views/../models/../sinastd/Param.h \
  /usr/lib/gcc/x86_64-redhat-linux/12/include/stdbool.h \
- /home/sinasadeghi/Programming/Clang/Project/views/../models/../sinastd/Error.h \
- /home/sinasadeghi/Programming/Clang/Project/views/../sinastd/Param.h \
- /home/sinasadeghi/Programming/Clang/Project/views/../sinastd/Error.h \
- /home/sinasadeghi/Programming/Clang/Project/views/../controllers/UserController.h \
- /home/sinasadeghi/Programming/Clang/Project/views/../controllers/../sinastd/Error.h \
- /home/sinasadeghi/Programming/Clang/Project/views/../controllers/../models/User.h \
- /home/sinasadeghi/Programming/Clang/Project/views/../controllers/../models/../sinastd/Date.h \
- /home/sinasadeghi/Programming/Clang/Project/views/../controllers/../models/../sinastd/Error.h \
- /home/sinasadeghi/Programming/Clang/Project/views/../controllers/../sinastd/Param.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/views/../models/../sinastd/Error.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/views/../sinastd/Param.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/views/../sinastd/Error.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/views/../controllers/UserController.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/views/../controllers/../sinastd/Error.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/views/../controllers/../models/User.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/views/../controllers/../models/../sinastd/Date.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/views/../controllers/../models/../sinastd/Error.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/views/../controllers/../sinastd/Param.h \
  /usr/include/stdlib.h /usr/include/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
  /usr/include/bits/wordsize.h /usr/include/bits/timesize.h \
@@ -38,9 +38,9 @@ CMakeFiles/FoodReservation.dir/views/test.c.o: \
  /usr/include/bits/atomic_wide_counter.h /usr/include/bits/struct_mutex.h \
  /usr/include/bits/struct_rwlock.h /usr/include/alloca.h \
  /usr/include/bits/stdlib-float.h \
- /home/sinasadeghi/Programming/Clang/Project/views/../controllers/SelfController.h \
- /home/sinasadeghi/Programming/Clang/Project/views/../controllers/FoodController.h \
- /home/sinasadeghi/Programming/Clang/Project/views/../controllers/MealController.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/views/../controllers/SelfController.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/views/../controllers/FoodController.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/views/../controllers/MealController.h \
  /usr/include/stdio.h \
  /usr/lib/gcc/x86_64-redhat-linux/12/include/stdarg.h \
  /usr/include/bits/types/__fpos_t.h /usr/include/bits/types/__mbstate_t.h \

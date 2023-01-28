@@ -1,3 +1,5 @@
-1001#success
-1009#success
-1011#success
+1000#invalid
+1001#permission-denied
+1002#permission-denied
+1003#permission-denied
+1004#not-found

@@ -1,7 +1,7 @@
 CMakeFiles/FoodReservation.dir/sinastd/Error.c.o: \
- /home/sinasadeghi/Programming/Clang/Project/sinastd/Error.c \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/sinastd/Error.c \
  /usr/include/stdc-predef.h \
- /home/sinasadeghi/Programming/Clang/Project/sinastd/Error.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/sinastd/Error.h \
  /usr/lib/gcc/x86_64-redhat-linux/12/include/stdbool.h \
  /usr/include/string.h /usr/include/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \

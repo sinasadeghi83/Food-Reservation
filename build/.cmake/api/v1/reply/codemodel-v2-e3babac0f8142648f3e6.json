@@ -301,8 +301,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/sinasadeghi/Programming/Clang/Project/build",
-		"source" : "/home/sinasadeghi/Programming/Clang/Project"
+		"build" : "/home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/build",
+		"source" : "/home/sinasadeghi/Programming/Clang/Project2/Food-Reservation"
 	},
 	"version" : 
 	{

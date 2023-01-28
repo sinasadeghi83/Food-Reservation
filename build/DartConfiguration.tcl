@@ -4,8 +4,8 @@
 
 
 # Configuration directories and files
-SourceDirectory: /home/sinasadeghi/Programming/Clang/Project
-BuildDirectory: /home/sinasadeghi/Programming/Clang/Project/build
+SourceDirectory: /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation
+BuildDirectory: /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/build
 
 # Where to place the cost data store
 CostDataFile: 
@@ -27,7 +27,7 @@ SubmitInactivityTimeout:
 NightlyStartTime: 00:00:00 EDT
 
 # Commands for the build/test/submit cycle
-ConfigureCommand: "/usr/bin/cmake" "/home/sinasadeghi/Programming/Clang/Project"
+ConfigureCommand: "/usr/bin/cmake" "/home/sinasadeghi/Programming/Clang/Project2/Food-Reservation"
 MakeCommand: /usr/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}" -- -i
 DefaultCTestConfigurationType: Release
 

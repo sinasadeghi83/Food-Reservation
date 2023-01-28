@@ -1,5 +1,5 @@
 CMakeFiles/FoodReservation.dir/database/DbManager.c.o: \
- /home/sinasadeghi/Programming/Clang/Project/database/DbManager.c \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/database/DbManager.c \
  /usr/include/stdc-predef.h /usr/include/sqlite3.h \
  /usr/lib/gcc/x86_64-redhat-linux/12/include/stdarg.h \
  /usr/include/stdlib.h /usr/include/bits/libc-header-start.h \
@@ -34,4 +34,4 @@ CMakeFiles/FoodReservation.dir/database/DbManager.c.o: \
  /usr/include/bits/stdio_lim.h /usr/include/string.h \
  /usr/include/bits/types/locale_t.h /usr/include/bits/types/__locale_t.h \
  /usr/include/strings.h \
- /home/sinasadeghi/Programming/Clang/Project/database/DbManager.h
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/database/DbManager.h

@@ -1,8 +1,8 @@
 CMakeFiles/FoodReservation.dir/models/Meal.c.o: \
- /home/sinasadeghi/Programming/Clang/Project/models/Meal.c \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/models/Meal.c \
  /usr/include/stdc-predef.h \
- /home/sinasadeghi/Programming/Clang/Project/models/Meal.h \
- /home/sinasadeghi/Programming/Clang/Project/models/Self.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/models/Meal.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/models/Self.h \
  /usr/include/stdlib.h /usr/include/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
  /usr/include/bits/wordsize.h /usr/include/bits/timesize.h \
@@ -28,12 +28,12 @@ CMakeFiles/FoodReservation.dir/models/Meal.c.o: \
  /usr/include/bits/struct_rwlock.h /usr/include/alloca.h \
  /usr/include/bits/stdlib-float.h \
  /usr/lib/gcc/x86_64-redhat-linux/12/include/stdbool.h \
- /home/sinasadeghi/Programming/Clang/Project/models/../sinastd/TimePeriod.h \
- /home/sinasadeghi/Programming/Clang/Project/models/../sinastd/Error.h \
- /home/sinasadeghi/Programming/Clang/Project/models/../sinastd/Date.h \
- /home/sinasadeghi/Programming/Clang/Project/models/Food.h \
- /home/sinasadeghi/Programming/Clang/Project/models/../sinastd/Parser.h \
- /home/sinasadeghi/Programming/Clang/Project/models/../database/DbManager.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/models/../sinastd/TimePeriod.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/models/../sinastd/Error.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/models/../sinastd/Date.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/models/Food.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/models/../sinastd/Parser.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/models/../database/DbManager.h \
  /usr/include/sqlite3.h \
  /usr/lib/gcc/x86_64-redhat-linux/12/include/stdarg.h \
  /usr/include/string.h /usr/include/bits/types/locale_t.h \

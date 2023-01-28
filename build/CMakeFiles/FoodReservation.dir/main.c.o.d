@@ -1,5 +1,5 @@
 CMakeFiles/FoodReservation.dir/main.c.o: \
- /home/sinasadeghi/Programming/Clang/Project/main.c \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/main.c \
  /usr/include/stdc-predef.h /usr/include/stdio.h \
  /usr/include/bits/libc-header-start.h /usr/include/features.h \
  /usr/include/features-time64.h /usr/include/bits/wordsize.h \
@@ -32,22 +32,22 @@ CMakeFiles/FoodReservation.dir/main.c.o: \
  /usr/include/bits/struct_rwlock.h /usr/include/alloca.h \
  /usr/include/bits/stdlib-float.h \
  /usr/lib/gcc/x86_64-redhat-linux/12/include/stdbool.h \
- /home/sinasadeghi/Programming/Clang/Project/models/User.h \
- /home/sinasadeghi/Programming/Clang/Project/models/../sinastd/Date.h \
- /home/sinasadeghi/Programming/Clang/Project/models/../sinastd/Error.h \
- /home/sinasadeghi/Programming/Clang/Project/sinastd/Date.h \
- /home/sinasadeghi/Programming/Clang/Project/sinastd/Error.h \
- /home/sinasadeghi/Programming/Clang/Project/views/console.h \
- /home/sinasadeghi/Programming/Clang/Project/views/test.h \
- /home/sinasadeghi/Programming/Clang/Project/views/../models/TestCase.h \
- /home/sinasadeghi/Programming/Clang/Project/views/../models/../sinastd/Param.h \
- /home/sinasadeghi/Programming/Clang/Project/views/../models/../sinastd/Error.h \
- /home/sinasadeghi/Programming/Clang/Project/views/../sinastd/Param.h \
- /home/sinasadeghi/Programming/Clang/Project/views/../sinastd/Error.h \
- /home/sinasadeghi/Programming/Clang/Project/views/../controllers/UserController.h \
- /home/sinasadeghi/Programming/Clang/Project/views/../controllers/../sinastd/Error.h \
- /home/sinasadeghi/Programming/Clang/Project/views/../controllers/../models/User.h \
- /home/sinasadeghi/Programming/Clang/Project/views/../controllers/../sinastd/Param.h \
- /home/sinasadeghi/Programming/Clang/Project/views/../controllers/SelfController.h \
- /home/sinasadeghi/Programming/Clang/Project/views/../controllers/FoodController.h \
- /home/sinasadeghi/Programming/Clang/Project/views/../controllers/MealController.h
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/models/User.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/models/../sinastd/Date.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/models/../sinastd/Error.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/sinastd/Date.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/sinastd/Error.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/views/console.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/views/test.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/views/../models/TestCase.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/views/../models/../sinastd/Param.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/views/../models/../sinastd/Error.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/views/../sinastd/Param.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/views/../sinastd/Error.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/views/../controllers/UserController.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/views/../controllers/../sinastd/Error.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/views/../controllers/../models/User.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/views/../controllers/../sinastd/Param.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/views/../controllers/SelfController.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/views/../controllers/FoodController.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/views/../controllers/MealController.h

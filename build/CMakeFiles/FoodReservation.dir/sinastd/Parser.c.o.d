@@ -1,7 +1,7 @@
 CMakeFiles/FoodReservation.dir/sinastd/Parser.c.o: \
- /home/sinasadeghi/Programming/Clang/Project/sinastd/Parser.c \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/sinastd/Parser.c \
  /usr/include/stdc-predef.h \
- /home/sinasadeghi/Programming/Clang/Project/sinastd/Parser.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/sinastd/Parser.h \
  /usr/lib/gcc/x86_64-redhat-linux/12/include/stdbool.h \
  /usr/include/string.h /usr/include/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \

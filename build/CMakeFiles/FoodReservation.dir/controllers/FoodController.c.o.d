@@ -1,16 +1,16 @@
 CMakeFiles/FoodReservation.dir/controllers/FoodController.c.o: \
- /home/sinasadeghi/Programming/Clang/Project/controllers/FoodController.c \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/controllers/FoodController.c \
  /usr/include/stdc-predef.h \
- /home/sinasadeghi/Programming/Clang/Project/controllers/FoodController.h \
- /home/sinasadeghi/Programming/Clang/Project/controllers/../sinastd/Error.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/controllers/FoodController.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/controllers/../sinastd/Error.h \
  /usr/lib/gcc/x86_64-redhat-linux/12/include/stdbool.h \
- /home/sinasadeghi/Programming/Clang/Project/controllers/../sinastd/Param.h \
- /home/sinasadeghi/Programming/Clang/Project/controllers/../models/Food.h \
- /home/sinasadeghi/Programming/Clang/Project/controllers/../models/../sinastd/Error.h \
- /home/sinasadeghi/Programming/Clang/Project/controllers/../sinastd/Parser.h \
- /home/sinasadeghi/Programming/Clang/Project/controllers/UserController.h \
- /home/sinasadeghi/Programming/Clang/Project/controllers/../models/User.h \
- /home/sinasadeghi/Programming/Clang/Project/controllers/../models/../sinastd/Date.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/controllers/../sinastd/Param.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/controllers/../models/Food.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/controllers/../models/../sinastd/Error.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/controllers/../sinastd/Parser.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/controllers/UserController.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/controllers/../models/User.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/controllers/../models/../sinastd/Date.h \
  /usr/include/stdlib.h /usr/include/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
  /usr/include/bits/wordsize.h /usr/include/bits/timesize.h \

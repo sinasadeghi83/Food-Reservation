@@ -50,6 +50,10 @@ TestCase *CreateTestCaseFromString(char *str)
     token = strtok(NULL, "#");
     char *title = token;
     token = strtok(NULL, "#");
+    if (token == NULL)
+    {
+        return TestCaseCreate(id, title, NULL);
+    }
     char params_str[strlen(token) + 1];
     strcpy(params_str, token);
     char *param_token = strtok(params_str, "|");
@@ -94,8 +98,16 @@ Error *TestCaseValidate(TestCase *this)
 {
     Error *err = ErrorCreate(false, NULL, NULL);
     // Find test case in database
-    TestCase **testCases = TestCaseFind(this->id, this->title);
+    TestCase **testCases = TestCaseFind(this->title);
     if (testCases == NULL)
+    {
+        err->isAny = true;
+        err->msg = ERR_INVALID;
+        err->testMsg = ERR_INVALID;
+        return err;
+    }
+    // Check if params are NULL
+    if (this->params == NULL)
     {
         err->isAny = true;
         err->msg = ERR_INVALID;
@@ -168,12 +180,11 @@ int TestCaseCallback(void *data, int argc, char **argv, char **azColName)
 
 // Find TestCase from Db
 // Return NULL if there is not any
-TestCase **TestCaseFind(int id, char *title)
+TestCase **TestCaseFind(char *title)
 {
     TestCase **test_cases = calloc(TEST_CASE_MAX_FETCH, sizeof(TestCase *));
     test_cases[0] = NULL;
-    char *strId = parseInt(id);
-    bool res = DbSelect(TEST_CASE_TABLE_NAME, (const char *[]){"id", "title", NULL}, (const char *[]){strId, title, NULL}, TestCaseCallback, (void *)test_cases);
+    bool res = DbSelect(TEST_CASE_TABLE_NAME, (const char *[]){"title", NULL}, (const char *[]){title, NULL}, TestCaseCallback, (void *)test_cases);
     callbackIndex = 0;
     if (test_cases[0] == NULL)
     {

@@ -83,7 +83,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/sinasadeghi/Programming/Clang/Project/build"
+			"value" : "/home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -187,10 +187,10 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "No help, variable specified on the command line."
+					"value" : "C compiler"
 				}
 			],
-			"type" : "FILEPATH",
+			"type" : "STRING",
 			"value" : "/usr/bin/gcc"
 		},
 		{
@@ -459,7 +459,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/sinasadeghi/Programming/Clang/Project/build/CMakeFiles/pkgRedirects"
+			"value" : "/home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/build/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -519,7 +519,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/sinasadeghi/Programming/Clang/Project"
+			"value" : "/home/sinasadeghi/Programming/Clang/Project2/Food-Reservation"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1423,7 +1423,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/sinasadeghi/Programming/Clang/Project/build"
+			"value" : "/home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/build"
 		},
 		{
 			"name" : "FoodReservation_IS_TOP_LEVEL",
@@ -1447,7 +1447,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/sinasadeghi/Programming/Clang/Project"
+			"value" : "/home/sinasadeghi/Programming/Clang/Project2/Food-Reservation"
 		},
 		{
 			"name" : "GITCOMMAND",

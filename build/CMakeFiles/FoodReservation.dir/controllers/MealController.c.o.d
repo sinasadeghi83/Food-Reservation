@@ -1,14 +1,14 @@
 CMakeFiles/FoodReservation.dir/controllers/MealController.c.o: \
- /home/sinasadeghi/Programming/Clang/Project/controllers/MealController.c \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/controllers/MealController.c \
  /usr/include/stdc-predef.h \
- /home/sinasadeghi/Programming/Clang/Project/controllers/MealController.h \
- /home/sinasadeghi/Programming/Clang/Project/controllers/../sinastd/Error.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/controllers/MealController.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/controllers/../sinastd/Error.h \
  /usr/lib/gcc/x86_64-redhat-linux/12/include/stdbool.h \
- /home/sinasadeghi/Programming/Clang/Project/controllers/../sinastd/Param.h \
- /home/sinasadeghi/Programming/Clang/Project/controllers/UserController.h \
- /home/sinasadeghi/Programming/Clang/Project/controllers/../models/User.h \
- /home/sinasadeghi/Programming/Clang/Project/controllers/../models/../sinastd/Date.h \
- /home/sinasadeghi/Programming/Clang/Project/controllers/../models/../sinastd/Error.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/controllers/../sinastd/Param.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/controllers/UserController.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/controllers/../models/User.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/controllers/../models/../sinastd/Date.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/controllers/../models/../sinastd/Error.h \
  /usr/include/stdlib.h /usr/include/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
  /usr/include/bits/wordsize.h /usr/include/bits/timesize.h \
@@ -33,9 +33,9 @@ CMakeFiles/FoodReservation.dir/controllers/MealController.c.o: \
  /usr/include/bits/atomic_wide_counter.h /usr/include/bits/struct_mutex.h \
  /usr/include/bits/struct_rwlock.h /usr/include/alloca.h \
  /usr/include/bits/stdlib-float.h \
- /home/sinasadeghi/Programming/Clang/Project/controllers/../models/Meal.h \
- /home/sinasadeghi/Programming/Clang/Project/controllers/../models/Self.h \
- /home/sinasadeghi/Programming/Clang/Project/controllers/../models/../sinastd/TimePeriod.h \
- /home/sinasadeghi/Programming/Clang/Project/controllers/../models/Self.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/controllers/../models/Meal.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/controllers/../models/Self.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/controllers/../models/../sinastd/TimePeriod.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/controllers/../models/Self.h \
  /usr/include/string.h /usr/include/bits/types/locale_t.h \
  /usr/include/bits/types/__locale_t.h /usr/include/strings.h

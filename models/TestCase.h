@@ -19,7 +19,7 @@ TestCase *TestCaseCreate(int id, char *title, Param **params);
 TestCase *CreateTestCaseFromString(char *str);
 void TestCaseFree(TestCase *test_case);
 Error *TestCaseValidate(TestCase *this);
-TestCase **TestCaseFind(int id, char *title);
+TestCase **TestCaseFind(char *title);
 int TestCaseCallback(void *data, int argc, char **argv, char **azColName);
 
 #endif

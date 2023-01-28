@@ -13,6 +13,7 @@ static FILE *inStream;
 static FILE *outStream;
 static TestCase *testCases[MAX_TEST_CASES];
 static int testCount = 0;
+static int testIndex = 1000;
 
 // Parsing test cases from file using TestCase struct
 // Checking each test case with its database record using TestCase struct
@@ -32,6 +33,7 @@ void TestActionMain()
             line[strlen(line) - 1] = '\0';
         }
         testCases[testCount++] = CreateTestCaseFromString(line);
+        testCases[testCount - 1]->id = testIndex++;
         memset(line, '\0', MAX_STR);
         fgets(line, MAX_STR, inStream);
     }

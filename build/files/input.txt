@@ -1,3 +1,5 @@
-1001#login#user:admin|password:admin
-1009#define-self#id:123|name:self-markazi-pesaran|location:main-campus|capacity:200|type:boyish|meal:both|lunch-time-limit:1130-1400|dinner-time-limit:1730-2000
+1002#login#use2r:admin|password:admin
+1009#define-self#id:123|name:self-markazi-pesaran|location:main-campus|capacity:200|type:boyish|meal:both|lunch-time-limit:1130-1400|dinner-time-limit:1730-2000|
+1010#define-food#id:432|name:ghorme|type:food|price:2500
 1011#define-meal-plan#self-id:123|date:2022-12-25|type:lunch|food-id:432|count:55
+1004#logout#user:admin

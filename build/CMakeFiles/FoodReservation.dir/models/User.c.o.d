@@ -1,12 +1,12 @@
 CMakeFiles/FoodReservation.dir/models/User.c.o: \
- /home/sinasadeghi/Programming/Clang/Project/models/User.c \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/models/User.c \
  /usr/include/stdc-predef.h \
- /home/sinasadeghi/Programming/Clang/Project/models/User.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/models/User.h \
  /usr/lib/gcc/x86_64-redhat-linux/12/include/stdbool.h \
- /home/sinasadeghi/Programming/Clang/Project/models/../sinastd/Date.h \
- /home/sinasadeghi/Programming/Clang/Project/models/../sinastd/Error.h \
- /home/sinasadeghi/Programming/Clang/Project/models/../libbcrypt/bcrypt.h \
- /home/sinasadeghi/Programming/Clang/Project/models/../database/DbManager.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/models/../sinastd/Date.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/models/../sinastd/Error.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/models/../libbcrypt/bcrypt.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/models/../database/DbManager.h \
  /usr/include/sqlite3.h \
  /usr/lib/gcc/x86_64-redhat-linux/12/include/stdarg.h \
  /usr/include/assert.h /usr/include/features.h \
@@ -36,4 +36,4 @@ CMakeFiles/FoodReservation.dir/models/User.c.o: \
  /usr/include/bits/stdlib-float.h /usr/include/string.h \
  /usr/include/bits/types/locale_t.h /usr/include/bits/types/__locale_t.h \
  /usr/include/strings.h \
- /home/sinasadeghi/Programming/Clang/Project/models/../sinastd/Parser.h
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/models/../sinastd/Parser.h

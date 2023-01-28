@@ -214,14 +214,14 @@ Error *UserValidate(User *this)
         }
     }
     // Check if fname and lname are alphabetical
-    if (!isAlpha(this->fname))
+    if (!isAlphaNumeric(this->fname))
     {
         error->isAny = true;
         error->msg = "First name must be alphabetic";
         error->testMsg = ERR_INVALID;
         return error;
     }
-    if (!isAlpha(this->lname))
+    if (!isAlphaNumeric(this->lname))
     {
         error->isAny = true;
         error->msg = "Last name must be alphabetic";
@@ -300,9 +300,9 @@ Error *UserSave(User *this)
         date,
         this->approved ? "1" : "0",
         NULL};
+    error->isAny = !DbInsert(USER_TABLE, USER_COLS, values);
     // Free the strings
     free(date);
-    error->isAny = !DbInsert(USER_TABLE, USER_COLS, values);
     error->msg = NULL;
     error->testMsg = NULL;
     return error;

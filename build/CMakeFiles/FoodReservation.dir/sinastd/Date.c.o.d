@@ -1,7 +1,7 @@
 CMakeFiles/FoodReservation.dir/sinastd/Date.c.o: \
- /home/sinasadeghi/Programming/Clang/Project/sinastd/Date.c \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/sinastd/Date.c \
  /usr/include/stdc-predef.h \
- /home/sinasadeghi/Programming/Clang/Project/sinastd/Date.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/sinastd/Date.h \
  /usr/lib/gcc/x86_64-redhat-linux/12/include/stdbool.h \
  /usr/include/stdlib.h /usr/include/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -34,4 +34,4 @@ CMakeFiles/FoodReservation.dir/sinastd/Date.c.o: \
  /usr/include/bits/types/__fpos64_t.h /usr/include/bits/types/__FILE.h \
  /usr/include/bits/types/FILE.h /usr/include/bits/types/struct_FILE.h \
  /usr/include/bits/stdio_lim.h \
- /home/sinasadeghi/Programming/Clang/Project/sinastd/Parser.h
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/sinastd/Parser.h

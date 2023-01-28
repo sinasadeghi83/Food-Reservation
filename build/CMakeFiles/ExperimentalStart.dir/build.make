@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sinasadeghi/Programming/Clang/Project
+CMAKE_SOURCE_DIR = /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sinasadeghi/Programming/Clang/Project/build
+CMAKE_BINARY_DIR = /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/build
 
 # Utility rule file for ExperimentalStart.
 
@@ -82,6 +82,6 @@ CMakeFiles/ExperimentalStart.dir/clean:
 .PHONY : CMakeFiles/ExperimentalStart.dir/clean
 
 CMakeFiles/ExperimentalStart.dir/depend:
-	cd /home/sinasadeghi/Programming/Clang/Project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sinasadeghi/Programming/Clang/Project /home/sinasadeghi/Programming/Clang/Project /home/sinasadeghi/Programming/Clang/Project/build /home/sinasadeghi/Programming/Clang/Project/build /home/sinasadeghi/Programming/Clang/Project/build/CMakeFiles/ExperimentalStart.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/build /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/build /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/build/CMakeFiles/ExperimentalStart.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ExperimentalStart.dir/depend
 

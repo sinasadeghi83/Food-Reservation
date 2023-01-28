@@ -1,7 +1,7 @@
 CMakeFiles/FoodReservation.dir/sinastd/Param.c.o: \
- /home/sinasadeghi/Programming/Clang/Project/sinastd/Param.c \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/sinastd/Param.c \
  /usr/include/stdc-predef.h \
- /home/sinasadeghi/Programming/Clang/Project/sinastd/Param.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/sinastd/Param.h \
  /usr/lib/gcc/x86_64-redhat-linux/12/include/stdbool.h \
  /usr/include/stdlib.h /usr/include/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \

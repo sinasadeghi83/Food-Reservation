@@ -1,7 +1,7 @@
 CMakeFiles/FoodReservation.dir/models/Self.c.o: \
- /home/sinasadeghi/Programming/Clang/Project/models/Self.c \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/models/Self.c \
  /usr/include/stdc-predef.h \
- /home/sinasadeghi/Programming/Clang/Project/models/Self.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/models/Self.h \
  /usr/include/stdlib.h /usr/include/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
  /usr/include/bits/wordsize.h /usr/include/bits/timesize.h \
@@ -27,11 +27,11 @@ CMakeFiles/FoodReservation.dir/models/Self.c.o: \
  /usr/include/bits/struct_rwlock.h /usr/include/alloca.h \
  /usr/include/bits/stdlib-float.h \
  /usr/lib/gcc/x86_64-redhat-linux/12/include/stdbool.h \
- /home/sinasadeghi/Programming/Clang/Project/models/../sinastd/TimePeriod.h \
- /home/sinasadeghi/Programming/Clang/Project/models/../sinastd/Error.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/models/../sinastd/TimePeriod.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/models/../sinastd/Error.h \
  /usr/include/string.h /usr/include/bits/types/locale_t.h \
  /usr/include/bits/types/__locale_t.h /usr/include/strings.h \
- /home/sinasadeghi/Programming/Clang/Project/models/../database/DbManager.h \
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/models/../database/DbManager.h \
  /usr/include/sqlite3.h \
  /usr/lib/gcc/x86_64-redhat-linux/12/include/stdarg.h \
- /home/sinasadeghi/Programming/Clang/Project/models/../sinastd/Parser.h
+ /home/sinasadeghi/Programming/Clang/Project2/Food-Reservation/models/../sinastd/Parser.h

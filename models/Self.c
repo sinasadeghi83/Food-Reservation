@@ -10,7 +10,7 @@
 #define SELF_TABLE "self"
 
 static int selvesIndex = 0;
-const char *SELF_COLS[8] = {"name", "location", "capacity", "type", "meal", "lunch_time", "dinner_time", NULL};
+const char *SELF_COLS[9] = {"id", "name", "location", "capacity", "type", "meal", "lunch_time", "dinner_time", NULL};
 
 // Self Creator
 Self *SelfCreate(int id, char *name, char *location, int capacity, SelfType type, SelfMeal meal, TimePeriod *lunchTime, TimePeriod *dinnerTime)
@@ -112,6 +112,34 @@ char *SelfMealToString(SelfMeal meal)
     default:
         return ERR_INVALID;
     }
+}
+
+// Self FreeAll
+void SelfFreeAll(Self **selves)
+{
+    if (selves == NULL)
+        return;
+    for (int i = 0; selves[i] != NULL; i++)
+    {
+        SelfFree(selves[i]);
+    }
+    free(selves);
+}
+
+// Self Free all from
+void SelfFreeAllFrom(Self **selves, int from)
+{
+    if (selves == NULL)
+        return;
+    for (int i = 0; selves[i] != NULL; i++)
+    {
+        if (i < from)
+        {
+            continue;
+        }
+        SelfFree(selves[i]);
+    }
+    free(selves);
 }
 
 // Self validator
@@ -252,7 +280,7 @@ Error *SelfSave(Self *this)
     {
         Error *error = ErrorCreate(true, "Self with same id already exists", ERR_INVALID);
         free(idStr);
-        free(selves);
+        SelfFreeAll(selves);
         return error;
     }
     free(idStr);
@@ -266,7 +294,8 @@ Error *SelfSave(Self *this)
     // Convert capacity to string
     char *capacity = parseInt(this->capacity);
     // Create columns and values
-    const char *vals[] = {this->name, this->location, capacity, SelfTypeToString(this->type), SelfMealToString(this->meal), lunchTime, dinnerTime, NULL};
+    const char *vals[9] = {
+        parseInt(this->id), this->name, this->location, capacity, SelfTypeToString(this->type), SelfMealToString(this->meal), lunchTime, dinnerTime, NULL};
     // Insert Self to database
     bool status = DbInsert(SELF_TABLE, SELF_COLS, vals);
     // Free lunchTime and dinnerTime if they are not NULL

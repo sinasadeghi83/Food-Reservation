@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/sinasadeghi/Programming/Clang/Project/controllers/FoodController.c" "CMakeFiles/FoodReservation.dir/controllers/FoodController.c.o" "gcc" "CMakeFiles/FoodReservation.dir/controllers/FoodController.c.o.d"
+  "/home/sinasadeghi/Programming/Clang/Project/controllers/MealController.c" "CMakeFiles/FoodReservation.dir/controllers/MealController.c.o" "gcc" "CMakeFiles/FoodReservation.dir/controllers/MealController.c.o.d"
   "/home/sinasadeghi/Programming/Clang/Project/controllers/SelfController.c" "CMakeFiles/FoodReservation.dir/controllers/SelfController.c.o" "gcc" "CMakeFiles/FoodReservation.dir/controllers/SelfController.c.o.d"
   "/home/sinasadeghi/Programming/Clang/Project/controllers/UserController.c" "CMakeFiles/FoodReservation.dir/controllers/UserController.c.o" "gcc" "CMakeFiles/FoodReservation.dir/controllers/UserController.c.o.d"
   "/home/sinasadeghi/Programming/Clang/Project/database/DbManager.c" "CMakeFiles/FoodReservation.dir/database/DbManager.c.o" "gcc" "CMakeFiles/FoodReservation.dir/database/DbManager.c.o.d"
@@ -19,6 +20,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/sinasadeghi/Programming/Clang/Project/libbcrypt/crypt_blowfish/wrapper.c" "CMakeFiles/FoodReservation.dir/libbcrypt/crypt_blowfish/wrapper.c.o" "gcc" "CMakeFiles/FoodReservation.dir/libbcrypt/crypt_blowfish/wrapper.c.o.d"
   "/home/sinasadeghi/Programming/Clang/Project/main.c" "CMakeFiles/FoodReservation.dir/main.c.o" "gcc" "CMakeFiles/FoodReservation.dir/main.c.o.d"
   "/home/sinasadeghi/Programming/Clang/Project/models/Food.c" "CMakeFiles/FoodReservation.dir/models/Food.c.o" "gcc" "CMakeFiles/FoodReservation.dir/models/Food.c.o.d"
+  "/home/sinasadeghi/Programming/Clang/Project/models/Meal.c" "CMakeFiles/FoodReservation.dir/models/Meal.c.o" "gcc" "CMakeFiles/FoodReservation.dir/models/Meal.c.o.d"
   "/home/sinasadeghi/Programming/Clang/Project/models/Self.c" "CMakeFiles/FoodReservation.dir/models/Self.c.o" "gcc" "CMakeFiles/FoodReservation.dir/models/Self.c.o.d"
   "/home/sinasadeghi/Programming/Clang/Project/models/TestCase.c" "CMakeFiles/FoodReservation.dir/models/TestCase.c.o" "gcc" "CMakeFiles/FoodReservation.dir/models/TestCase.c.o.d"
   "/home/sinasadeghi/Programming/Clang/Project/models/User.c" "CMakeFiles/FoodReservation.dir/models/User.c.o" "gcc" "CMakeFiles/FoodReservation.dir/models/User.c.o.d"

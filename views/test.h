@@ -8,6 +8,7 @@
 #include "../controllers/UserController.h"
 #include "../controllers/SelfController.h"
 #include "../controllers/FoodController.h"
+#include "../controllers/MealController.h"
 
 typedef struct ActionLookup ActionLookup;
 
@@ -31,6 +32,7 @@ static ActionLookup testActionLookup[] = {
     {"deactivate", UserActionDeactivate},
     {"define-self", SelfActionAdd},
     {"define-food", FoodActionAdd},
+    {"define-meal-plan", MealActionAdd},
     {NULL, NULL}};
 
 void TestActionMain();

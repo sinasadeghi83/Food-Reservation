@@ -2,6 +2,7 @@
 #include <stdbool.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 
 // Create TimePeriod
 TimePeriod *TimePeriodCreate(int startHour, int startMin, int endHour, int endMin)
@@ -34,7 +35,7 @@ void TimePeriodFree(TimePeriod *this)
 TimePeriod *TimePeriodFromString(char *str)
 {
     // Check if string is NULL
-    if (str == NULL)
+    if (str == NULL || strcmp(str, "") == 0)
     {
         return NULL;
     }
@@ -51,7 +52,7 @@ char *TimePeriodToString(TimePeriod *this)
     // check if time period is NULL
     if (this == NULL)
     {
-        return NULL;
+        return "";
     }
     char *str = malloc(9);
     sprintf(str, "%02d%02d-%02d%02d", this->startHour, this->startMin, this->endHour, this->endMin);

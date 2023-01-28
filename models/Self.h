@@ -44,6 +44,8 @@ struct Self
 void SelfIntialise(Self *this, int id, char *name, char *location, int capacity, SelfType type, SelfMeal meal, TimePeriod *lunchTime, TimePeriod *dinnerTime);
 Self *SelfCreate(int id, char *name, char *location, int capacity, SelfType type, SelfMeal meal, TimePeriod *lunchTime, TimePeriod *dinnerTime);
 void SelfFree(Self *this);
+void SelfFreeAll(Self **meals);
+void SelfFreeAllFrom(Self **meals, int from);
 SelfType SelfTypeFromString(char *type);
 char *SelfTypeToString(SelfType type);
 SelfMeal SelfMealFromString(char *meal);

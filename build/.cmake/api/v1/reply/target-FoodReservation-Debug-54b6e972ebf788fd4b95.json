@@ -24,7 +24,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 32,
+				"line" : 34,
 				"parent" : 0
 			}
 		]
@@ -61,7 +61,9 @@
 				17,
 				18,
 				19,
-				20
+				20,
+				21,
+				22
 			]
 		}
 	],
@@ -114,7 +116,9 @@
 				17,
 				18,
 				19,
-				20
+				20,
+				21,
+				22
 			]
 		}
 	],
@@ -195,6 +199,12 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
+			"path" : "models/Meal.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
 			"path" : "views/console.c",
 			"sourceGroupIndex" : 0
 		},
@@ -220,6 +230,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "controllers/FoodController.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "controllers/MealController.c",
 			"sourceGroupIndex" : 0
 		},
 		{

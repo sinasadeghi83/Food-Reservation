@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/FoodReservation.dir/controllers/FoodController.c.o"
   "CMakeFiles/FoodReservation.dir/controllers/FoodController.c.o.d"
+  "CMakeFiles/FoodReservation.dir/controllers/MealController.c.o"
+  "CMakeFiles/FoodReservation.dir/controllers/MealController.c.o.d"
   "CMakeFiles/FoodReservation.dir/controllers/SelfController.c.o"
   "CMakeFiles/FoodReservation.dir/controllers/SelfController.c.o.d"
   "CMakeFiles/FoodReservation.dir/controllers/UserController.c.o"
@@ -21,6 +23,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/FoodReservation.dir/main.c.o.d"
   "CMakeFiles/FoodReservation.dir/models/Food.c.o"
   "CMakeFiles/FoodReservation.dir/models/Food.c.o.d"
+  "CMakeFiles/FoodReservation.dir/models/Meal.c.o"
+  "CMakeFiles/FoodReservation.dir/models/Meal.c.o.d"
   "CMakeFiles/FoodReservation.dir/models/Self.c.o"
   "CMakeFiles/FoodReservation.dir/models/Self.c.o.d"
   "CMakeFiles/FoodReservation.dir/models/TestCase.c.o"

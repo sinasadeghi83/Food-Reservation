@@ -61,6 +61,11 @@
 },
 {
   "directory": "/home/sinasadeghi/Programming/Clang/Project/build",
+  "command": "/usr/bin/gcc    -lsqlite3 -lm -g -o CMakeFiles/FoodReservation.dir/models/Meal.c.o -c /home/sinasadeghi/Programming/Clang/Project/models/Meal.c",
+  "file": "/home/sinasadeghi/Programming/Clang/Project/models/Meal.c"
+},
+{
+  "directory": "/home/sinasadeghi/Programming/Clang/Project/build",
   "command": "/usr/bin/gcc    -lsqlite3 -lm -g -o CMakeFiles/FoodReservation.dir/views/console.c.o -c /home/sinasadeghi/Programming/Clang/Project/views/console.c",
   "file": "/home/sinasadeghi/Programming/Clang/Project/views/console.c"
 },
@@ -83,6 +88,11 @@
   "directory": "/home/sinasadeghi/Programming/Clang/Project/build",
   "command": "/usr/bin/gcc    -lsqlite3 -lm -g -o CMakeFiles/FoodReservation.dir/controllers/FoodController.c.o -c /home/sinasadeghi/Programming/Clang/Project/controllers/FoodController.c",
   "file": "/home/sinasadeghi/Programming/Clang/Project/controllers/FoodController.c"
+},
+{
+  "directory": "/home/sinasadeghi/Programming/Clang/Project/build",
+  "command": "/usr/bin/gcc    -lsqlite3 -lm -g -o CMakeFiles/FoodReservation.dir/controllers/MealController.c.o -c /home/sinasadeghi/Programming/Clang/Project/controllers/MealController.c",
+  "file": "/home/sinasadeghi/Programming/Clang/Project/controllers/MealController.c"
 },
 {
   "directory": "/home/sinasadeghi/Programming/Clang/Project/build",

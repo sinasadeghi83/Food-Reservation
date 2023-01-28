@@ -12,12 +12,14 @@ enum UserGender
 {
     USER_MALE,
     USER_FEMALE,
+    USER_GENDER_INVALID,
 };
 
 enum UserType
 {
     USER_ADMIN,
     USER_STUDENT,
+    USER_TYPE_INVALID,
 };
 
 struct User
@@ -46,6 +48,7 @@ char *UserTypeString(User *this);
 char *UserGenderString(User *this);
 UserType UserStringToType(char *type);
 UserGender UserStringToGender(char *gender);
+Error *UserValidate(User *this);
 Error *UserSave(User *this);
 Error *UserUpdate(User *this);
 Error *UserDelete(User *this);

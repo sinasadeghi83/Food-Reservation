@@ -559,11 +559,13 @@ CMakeFiles/FoodReservation.dir/models/User.c.o: /home/sinasadeghi/Programming/Cl
   /usr/include/string.h \
   /usr/include/bits/types/locale_t.h \
   /usr/include/bits/types/__locale_t.h \
-  /usr/include/strings.h
+  /usr/include/strings.h \
+  /home/sinasadeghi/Programming/Clang/Project/sinastd/Parser.h
 
 CMakeFiles/FoodReservation.dir/sinastd/Date.c.o: /home/sinasadeghi/Programming/Clang/Project/sinastd/Date.c \
   /usr/include/stdc-predef.h \
   /home/sinasadeghi/Programming/Clang/Project/sinastd/Date.h \
+  /usr/lib/gcc/x86_64-redhat-linux/12/include/stdbool.h \
   /usr/include/stdlib.h \
   /usr/include/bits/libc-header-start.h \
   /usr/include/features.h \
@@ -729,6 +731,7 @@ CMakeFiles/FoodReservation.dir/sinastd/Param.c.o: /home/sinasadeghi/Programming/
 CMakeFiles/FoodReservation.dir/sinastd/Parser.c.o: /home/sinasadeghi/Programming/Clang/Project/sinastd/Parser.c \
   /usr/include/stdc-predef.h \
   /home/sinasadeghi/Programming/Clang/Project/sinastd/Parser.h \
+  /usr/lib/gcc/x86_64-redhat-linux/12/include/stdbool.h \
   /usr/include/string.h \
   /usr/include/bits/libc-header-start.h \
   /usr/include/features.h \
@@ -785,7 +788,7 @@ CMakeFiles/FoodReservation.dir/sinastd/Parser.c.o: /home/sinasadeghi/Programming
   /usr/include/bits/struct_rwlock.h \
   /usr/include/alloca.h \
   /usr/include/bits/stdlib-float.h \
-  /usr/lib/gcc/x86_64-redhat-linux/12/include/stdbool.h
+  /usr/include/ctype.h
 
 CMakeFiles/FoodReservation.dir/views/console.c.o: /home/sinasadeghi/Programming/Clang/Project/views/console.c \
   /usr/include/stdc-predef.h \
@@ -945,6 +948,8 @@ CMakeFiles/FoodReservation.dir/views/test.c.o: /home/sinasadeghi/Programming/Cla
 
 /usr/include/sys/ttydefaults.h:
 
+/usr/include/bits/termios-tcflow.h:
+
 /usr/include/stdio.h:
 
 /usr/include/bits/types/timer_t.h:
@@ -1050,8 +1055,6 @@ CMakeFiles/FoodReservation.dir/views/test.c.o: /home/sinasadeghi/Programming/Cla
 /usr/include/asm/errno.h:
 
 /usr/lib/gcc/x86_64-redhat-linux/12/include/stdbool.h:
-
-/usr/include/bits/waitflags.h:
 
 /usr/include/bits/byteswap.h:
 
@@ -1195,10 +1198,12 @@ CMakeFiles/FoodReservation.dir/views/test.c.o: /home/sinasadeghi/Programming/Cla
 
 /home/sinasadeghi/Programming/Clang/Project/sinastd/Parser.c:
 
+/usr/include/bits/waitflags.h:
+
+/usr/include/ctype.h:
+
 /usr/include/termios.h:
 
 /usr/include/bits/termios.h:
 
 /usr/include/bits/termios-c_oflag.h:
-
-/usr/include/bits/termios-tcflow.h:

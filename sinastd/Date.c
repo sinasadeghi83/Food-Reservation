@@ -1,6 +1,7 @@
 #include "Date.h"
 #include <stdlib.h>
 #include <string.h>
+#include <stdbool.h>
 #include <stdio.h>
 #include "Parser.h"
 
@@ -59,4 +60,44 @@ char *DateToString(Date *this)
         sprintf(result, "%s%d", result, this->day);
     }
     return result;
+}
+
+// Checks if the given date is valid according to the Jalali calendar
+bool DateIsValid(Date *this)
+{
+    if (this->year < 0 || this->month < 0 || this->day < 0)
+    {
+        return false;
+    }
+    if (this->month > 12)
+    {
+        return false;
+    }
+    if (this->day > 31)
+    {
+        return false;
+    }
+    // Check for leap year
+    if (this->month == 12)
+    {
+        if (this->day > 30)
+        {
+            return false;
+        }
+        if (this->day == 30)
+        {
+            if (this->year % 4 != 3)
+            {
+                return false;
+            }
+        }
+    }
+    if (this->month > 6)
+    {
+        if (this->day > 30)
+        {
+            return false;
+        }
+    }
+    return true;
 }

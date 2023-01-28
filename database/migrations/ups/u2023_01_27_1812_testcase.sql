@@ -11,3 +11,4 @@ INSERT INTO "main"."testcase" ("id", "title", "valid_params") VALUES ('1004', 'a
 INSERT INTO "main"."testcase" ("id", "title", "valid_params") VALUES ('1005', 'change-student-pass', 'user,new-pass');
 INSERT INTO "main"."testcase" ("id", "title", "valid_params") VALUES ('1006', 'remove-student', 'user');
 INSERT INTO "main"."testcase" ("id", "title", "valid_params") VALUES ('1007', 'deactivate', 'user');
+INSERT INTO "main"."testcase" ("id", "title", "valid_params") VALUES ('1008', 'register', 'name,family,user-id,password,national-id-code,birthdate,gender,type');

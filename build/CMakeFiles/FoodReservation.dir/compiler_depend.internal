@@ -570,11 +570,13 @@ CMakeFiles/FoodReservation.dir/models/User.c.o
  /usr/include/bits/types/locale_t.h
  /usr/include/bits/types/__locale_t.h
  /usr/include/strings.h
+ /home/sinasadeghi/Programming/Clang/Project/sinastd/Parser.h
 
 CMakeFiles/FoodReservation.dir/sinastd/Date.c.o
  /home/sinasadeghi/Programming/Clang/Project/sinastd/Date.c
  /usr/include/stdc-predef.h
  /home/sinasadeghi/Programming/Clang/Project/sinastd/Date.h
+ /usr/lib/gcc/x86_64-redhat-linux/12/include/stdbool.h
  /usr/include/stdlib.h
  /usr/include/bits/libc-header-start.h
  /usr/include/features.h
@@ -743,6 +745,7 @@ CMakeFiles/FoodReservation.dir/sinastd/Parser.c.o
  /home/sinasadeghi/Programming/Clang/Project/sinastd/Parser.c
  /usr/include/stdc-predef.h
  /home/sinasadeghi/Programming/Clang/Project/sinastd/Parser.h
+ /usr/lib/gcc/x86_64-redhat-linux/12/include/stdbool.h
  /usr/include/string.h
  /usr/include/bits/libc-header-start.h
  /usr/include/features.h
@@ -799,7 +802,7 @@ CMakeFiles/FoodReservation.dir/sinastd/Parser.c.o
  /usr/include/bits/struct_rwlock.h
  /usr/include/alloca.h
  /usr/include/bits/stdlib-float.h
- /usr/lib/gcc/x86_64-redhat-linux/12/include/stdbool.h
+ /usr/include/ctype.h
 
 CMakeFiles/FoodReservation.dir/views/console.c.o
  /home/sinasadeghi/Programming/Clang/Project/views/console.c

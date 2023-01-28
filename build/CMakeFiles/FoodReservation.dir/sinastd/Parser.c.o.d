@@ -2,6 +2,7 @@ CMakeFiles/FoodReservation.dir/sinastd/Parser.c.o: \
  /home/sinasadeghi/Programming/Clang/Project/sinastd/Parser.c \
  /usr/include/stdc-predef.h \
  /home/sinasadeghi/Programming/Clang/Project/sinastd/Parser.h \
+ /usr/lib/gcc/x86_64-redhat-linux/12/include/stdbool.h \
  /usr/include/string.h /usr/include/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
  /usr/include/bits/wordsize.h /usr/include/bits/timesize.h \
@@ -33,5 +34,4 @@ CMakeFiles/FoodReservation.dir/sinastd/Parser.c.o: \
  /usr/include/bits/pthreadtypes-arch.h \
  /usr/include/bits/atomic_wide_counter.h /usr/include/bits/struct_mutex.h \
  /usr/include/bits/struct_rwlock.h /usr/include/alloca.h \
- /usr/include/bits/stdlib-float.h \
- /usr/lib/gcc/x86_64-redhat-linux/12/include/stdbool.h
+ /usr/include/bits/stdlib-float.h /usr/include/ctype.h

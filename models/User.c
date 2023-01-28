@@ -9,6 +9,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "../sinastd/Error.h"
+#include "../sinastd/Parser.h"
 
 #define USER_TABLE "user"
 #define MAX_USER_FETCH 100
@@ -128,6 +129,9 @@ char *UserTypeString(User *this)
 
     case USER_STUDENT:
         return "student";
+
+    default:
+        return ERR_INVALID;
     }
 }
 
@@ -141,6 +145,9 @@ char *UserGenderString(User *this)
 
     case USER_FEMALE:
         return "female";
+
+    default:
+        return ERR_INVALID;
     }
 }
 
@@ -151,9 +158,13 @@ UserGender UserStringToGender(char *gender)
     {
         return USER_FEMALE;
     }
-    else
+    else if (strcmp(gender, "male") == 0)
     {
         return USER_MALE;
+    }
+    else
+    {
+        return USER_GENDER_INVALID;
     }
 }
 
@@ -164,16 +175,107 @@ UserType UserStringToType(char *type)
     {
         return USER_ADMIN;
     }
-    else
+    else if (strcmp(type, "student") == 0)
     {
         return USER_STUDENT;
     }
+    else
+    {
+        return USER_TYPE_INVALID;
+    }
+}
+
+// Validate user data
+Error *UserValidate(User *this)
+{
+    // Create Error
+    Error *error = ErrorCreate(false, NULL, NULL);
+    // Check if username is valid
+    // if user was student then username must be numeric
+    // otherwise it must be alphanumeric
+    if (this->type == USER_STUDENT)
+    {
+        if (!isNumeric(this->username))
+        {
+            error->isAny = true;
+            error->msg = "Username must be numeric";
+            error->testMsg = ERR_INVALID;
+            return error;
+        }
+    }
+    else
+    {
+        if (!isAlphaNumeric(this->username))
+        {
+            error->isAny = true;
+            error->msg = "Username must be alphanumeric";
+            error->testMsg = ERR_INVALID;
+            return error;
+        }
+    }
+    // Check if fname and lname are alphabetical
+    if (!isAlpha(this->fname))
+    {
+        error->isAny = true;
+        error->msg = "First name must be alphabetic";
+        error->testMsg = ERR_INVALID;
+        return error;
+    }
+    if (!isAlpha(this->lname))
+    {
+        error->isAny = true;
+        error->msg = "Last name must be alphabetic";
+        error->testMsg = ERR_INVALID;
+        return error;
+    }
+    // Check if national code is numeric
+    if (!isNumeric(this->national_code))
+    {
+        error->isAny = true;
+        error->msg = "National code must be numeric";
+        error->testMsg = ERR_INVALID;
+        return error;
+    }
+    // Check if birth date is valid
+    if (!DateIsValid(this->birth_date))
+    {
+        error->isAny = true;
+        error->msg = "Birth date is not valid";
+        error->testMsg = ERR_INVALID;
+        return error;
+    }
+
+    // Check if user type is valid
+    if (this->type == USER_TYPE_INVALID)
+    {
+        error->isAny = true;
+        error->msg = "User type is not valid";
+        error->testMsg = ERR_INVALID;
+        return error;
+    }
+
+    // Check if user gender is valid
+    if (this->gender == USER_GENDER_INVALID)
+    {
+        error->isAny = true;
+        error->msg = "User gender is not valid";
+        error->testMsg = ERR_INVALID;
+        return error;
+    }
+
+    return error;
 }
 
 // Save the user to the database using DbManager
 Error *UserSave(User *this)
 {
-    Error *error = ErrorCreate(false, NULL, NULL);
+    Error *error;
+    // Validate User
+    error = UserValidate(this);
+    if (error->isAny)
+    {
+        return error;
+    }
     User **users = UserFind((const char *[]){"username", NULL}, (const char *[]){this->username, NULL});
     if (users != NULL)
     {
@@ -222,6 +324,13 @@ Error *UserUpdate(User *this)
         return error;
     }
     UserFreeArray(users);
+    ErrorFree(error);
+    // Validate User
+    error = UserValidate(this);
+    if (error->isAny)
+    {
+        return error;
+    }
     // Creating values array
     char *type = UserTypeString(this);
     char *gender = UserGenderString(this);

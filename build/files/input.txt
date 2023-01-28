@@ -1,11 +1,1 @@
-1001#login#user:ali|password:4321
-1007#deactivate#user:test2
-1002#logout#user:ali
-1001#login#user:aa2|password:test
-1007#deactivate#user:admin
-1002#logout#user:aa2
-1001#login#user:admin|password:admin
-1007#deactivate#user:ali
-1002#logout#user:admin
-1001#login#user:ali|password:1234
-1001#login#user:ali|password:4321
+1008#register#name:Testsina|family:Testi|user-id:140133364|password:asd123|national-id-code:0013334455|birthdate:1383-12-30|gender:male|type:admin

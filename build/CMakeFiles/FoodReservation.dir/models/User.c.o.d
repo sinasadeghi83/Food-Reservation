@@ -35,4 +35,5 @@ CMakeFiles/FoodReservation.dir/models/User.c.o: \
  /usr/include/bits/struct_rwlock.h /usr/include/alloca.h \
  /usr/include/bits/stdlib-float.h /usr/include/string.h \
  /usr/include/bits/types/locale_t.h /usr/include/bits/types/__locale_t.h \
- /usr/include/strings.h
+ /usr/include/strings.h \
+ /home/sinasadeghi/Programming/Clang/Project/models/../sinastd/Parser.h

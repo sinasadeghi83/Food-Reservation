@@ -85,8 +85,8 @@ char *SelfTypeToString(SelfType type)
 // SelfMeal from string
 SelfMeal SelfMealFromString(char *meal)
 {
-    // if (strcmp(meal, "breakfast") == 0)
-    //     return SelfMeal_Breakfast;
+    if (strcmp(meal, "breakfast") == 0)
+        return SelfMeal_Breakfast;
     if (strcmp(meal, "lunch") == 0)
         return SelfMeal_Lunch;
     if (strcmp(meal, "dinner") == 0)

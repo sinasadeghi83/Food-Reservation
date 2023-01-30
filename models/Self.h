@@ -21,7 +21,7 @@ enum SelfType
 
 enum SelfMeal
 {
-    // SelfMeal_Breakfast,
+    SelfMeal_Breakfast,
     SelfMeal_Lunch,
     SelfMeal_Dinner,
     SelfMeal_Both,

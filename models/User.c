@@ -214,14 +214,14 @@ Error *UserValidate(User *this)
         }
     }
     // Check if fname and lname are alphabetical
-    if (!isAlphaNumeric(this->fname))
+    if (!isAlpha(this->fname))
     {
         error->isAny = true;
         error->msg = "First name must be alphabetic";
         error->testMsg = ERR_INVALID;
         return error;
     }
-    if (!isAlphaNumeric(this->lname))
+    if (!isAlpha(this->lname))
     {
         error->isAny = true;
         error->msg = "Last name must be alphabetic";
